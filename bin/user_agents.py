@@ -8,11 +8,11 @@ from ua_parser import user_agent_parser
 
 # The following log levels are available:
 # Debug (NOISY!!!):
-LOG_LEVEL = logging.DEBUG
+# LOG_LEVEL = logging.DEBUG
 # Info:
 # LOG_LEVEL = logging.INFO
 # Error:
-# LOG_LEVEL = logging.ERROR
+LOG_LEVEL = logging.ERROR
 
 LOG_FILENAME = 'TA-user_agents.log'
 LOG_FORMAT = "[%(asctime)s] %(name)s %(levelname)s: %(message)s"
