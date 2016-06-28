@@ -27,8 +27,27 @@ The lookup will output the following fields:
 ## Customization
 To add your own user agents, you can use the YAML file in TA-user-agents/bin/ua_parser/ named regexes.yaml.
 
+## Support
+Support is on a best-effort basis. Need help? Use the Splunk community resources! I can be found on many of them:
+
+* [Splunk Answers](https://answers.splunk.com/)
+* [#splunk on Efnet IRC](https://wiki.splunk.com/Community:IRC)
+* [Splunk Slack channel](http://splunk402.com/chat/)
+
+The git repo for this app is located [here](https://github.com/automine/TA-user-agents).
+
 ## Credits
 This TA uses a Python module from:
 
-https://github.com/tobie/ua-parser
+https://github.com/ua-parser
 
+Icons made by [Freepik](http://www.freepik.com) from [Flaticon](http://www.flaticon.com) is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)
+
+## Change log
+### v 1.6
+* Updated to the latest version of the ua-parser
+* Changed URL for the ua-parser to the new project page
+* Added app icons
+
+### v 1.5
+Initial release

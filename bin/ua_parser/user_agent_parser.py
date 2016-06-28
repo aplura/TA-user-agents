@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-#
 # Copyright 2009 Google Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the 'License')
@@ -16,22 +14,12 @@
 
 """Python implementation of the UA parser."""
 
+from __future__ import absolute_import
+
 __author__ = 'Lindsey Simon <elsigh@gmail.com>'
 
-import json
 import os
 import re
-
-# pip may copy regexes.yaml to different places depending on the OS.
-# For example, on Mac pip copies regexes.yaml to the folder where
-# user_agent_parser.py lives where as Fedora leaves regexes.yaml to "data" dir
-# See https://github.com/tobie/ua-parser/issues/209 for the complete discussion
-
-ROOT_DIR = os.path.abspath(os.path.dirname(__file__))
-DATA_DIR = os.path.abspath(os.path.join(ROOT_DIR, '..', 'data'))
-regex_dir = ROOT_DIR if os.path.exists(os.path.join(ROOT_DIR, 'regexes.yaml')) else DATA_DIR
-
-from pkg_resources import resource_filename
 
 
 class UserAgentParser(object):
@@ -87,7 +75,9 @@ class UserAgentParser(object):
 
 
 class OSParser(object):
-    def __init__(self, pattern, os_replacement=None, os_v1_replacement=None, os_v2_replacement=None):
+    def __init__(self, pattern, os_replacement=None,
+                 os_v1_replacement=None, os_v2_replacement=None,
+                 os_v3_replacement=None, os_v4_replacement=None):
         """Initialize UserAgentParser.
 
         Args:
@@ -95,12 +85,16 @@ class OSParser(object):
           os_replacement: a string to override the matched os (optional)
           os_v1_replacement: a string to override the matched v1 (optional)
           os_v2_replacement: a string to override the matched v2 (optional)
+          os_v3_replacement: a string to override the matched v3 (optional)
+          os_v4_replacement: a string to override the matched v4 (optional)
         """
         self.pattern = pattern
         self.user_agent_re = re.compile(self.pattern)
         self.os_replacement = os_replacement
         self.os_v1_replacement = os_v1_replacement
         self.os_v2_replacement = os_v2_replacement
+        self.os_v3_replacement = os_v3_replacement
+        self.os_v4_replacement = os_v4_replacement
 
     def MatchSpans(self, user_agent_string):
         match_spans = []
@@ -119,29 +113,34 @@ class OSParser(object):
                     os = re.sub(r'\$1', match.group(1), self.os_replacement)
                 else:
                     os = self.os_replacement
-            else:
+            elif match.lastindex:
                 os = match.group(1)
 
             if self.os_v1_replacement:
                 os_v1 = self.os_v1_replacement
-            elif match.lastindex >= 2:
+            elif match.lastindex and match.lastindex >= 2:
                 os_v1 = match.group(2)
 
             if self.os_v2_replacement:
                 os_v2 = self.os_v2_replacement
-            elif match.lastindex >= 3:
+            elif match.lastindex and match.lastindex >= 3:
                 os_v2 = match.group(3)
 
-            if match.lastindex >= 4:
+            if self.os_v3_replacement:
+                os_v3 = self.os_v3_replacement
+            elif match.lastindex and match.lastindex >= 4:
                 os_v3 = match.group(4)
-                if match.lastindex >= 5:
-                    os_v4 = match.group(5)
+
+            if self.os_v4_replacement:
+                os_v4 = self.os_v4_replacement
+            elif match.lastindex and match.lastindex >= 5:
+                os_v4 = match.group(5)
 
         return os, os_v1, os_v2, os_v3, os_v4
 
 
 class DeviceParser(object):
-    def __init__(self, pattern, device_replacement=None):
+    def __init__(self, pattern, regex_flag=None, device_replacement=None, brand_replacement=None, model_replacement=None):
         """Initialize UserAgentParser.
 
         Args:
@@ -149,8 +148,13 @@ class DeviceParser(object):
           device_replacement: a string to override the matched device (optional)
         """
         self.pattern = pattern
-        self.user_agent_re = re.compile(self.pattern)
+        if regex_flag == 'i':
+            self.user_agent_re = re.compile(self.pattern, re.IGNORECASE)
+        else:
+            self.user_agent_re = re.compile(self.pattern)
         self.device_replacement = device_replacement
+        self.brand_replacement = brand_replacement
+        self.model_replacement = model_replacement
 
     def MatchSpans(self, user_agent_string):
         match_spans = []
@@ -160,19 +164,42 @@ class DeviceParser(object):
                            for group_index in range(1, match.lastindex + 1)]
         return match_spans
 
+    def MultiReplace(self, string, match):
+        def _repl(m):
+            index = int(m.group(1)) - 1
+            group = match.groups()
+            if index < len(group):
+                return group[index]
+            return ''
+
+        _string = re.sub(r'\$(\d)', _repl, string)
+        _string = re.sub(r'^\s+|\s+$', '', _string)
+        if _string == '':
+            return None
+        return _string
+
     def Parse(self, user_agent_string):
-        device = None
+        device, brand, model = None, None, None
         match = self.user_agent_re.search(user_agent_string)
         if match:
             if self.device_replacement:
-                if re.search(r'\$1', self.device_replacement):
-                    device = re.sub(r'\$1', match.group(1), self.device_replacement)
-                else:
-                    device = self.device_replacement
+                device = self.MultiReplace(self.device_replacement, match)
             else:
                 device = match.group(1)
 
-        return device
+            if self.brand_replacement:
+                brand = self.MultiReplace(self.brand_replacement, match)
+
+            if self.model_replacement:
+                model = self.MultiReplace(self.model_replacement, match)
+            elif len(match.groups()) > 0:
+                model = match.group(1)
+
+        return device, brand, model
+
+
+MAX_CACHE_SIZE = 20
+_parse_cache = {}
 
 
 def Parse(user_agent_string, **jsParseBits):
@@ -184,12 +211,20 @@ def Parse(user_agent_string, **jsParseBits):
       A dictionary containing all parsed bits
     """
     jsParseBits = jsParseBits or {}
-    return {
+    key = (user_agent_string, repr(jsParseBits))
+    cached = _parse_cache.get(key)
+    if cached is not None:
+        return cached
+    if len(_parse_cache) > MAX_CACHE_SIZE:
+        _parse_cache.clear()
+    v = {
         'user_agent': ParseUserAgent(user_agent_string, **jsParseBits),
         'os': ParseOS(user_agent_string, **jsParseBits),
         'device': ParseDevice(user_agent_string, **jsParseBits),
         'string': user_agent_string
     }
+    _parse_cache[key] = v
+    return v
 
 
 def ParseUserAgent(user_agent_string, **jsParseBits):
@@ -217,8 +252,10 @@ def ParseUserAgent(user_agent_string, **jsParseBits):
     # Override for Chrome Frame IFF Chrome is enabled.
     if 'js_user_agent_string' in jsParseBits:
         js_user_agent_string = jsParseBits['js_user_agent_string']
-        if (js_user_agent_string and js_user_agent_string.find('Chrome/') > -1 and
-            user_agent_string.find('chromeframe') > -1):
+        if (
+            js_user_agent_string and js_user_agent_string.find('Chrome/') > -1 and
+            user_agent_string.find('chromeframe') > -1
+        ):
             jsOverride = {}
             jsOverride = ParseUserAgent(js_user_agent_string)
             family = 'Chrome Frame (%s %s)' % (family, v1)
@@ -266,15 +303,17 @@ def ParseDevice(user_agent_string):
         A dictionary containing parsed bits.
     """
     for deviceParser in DEVICE_PARSERS:
-        device = deviceParser.Parse(user_agent_string)
+        device, brand, model = deviceParser.Parse(user_agent_string)
         if device:
             break
 
-    if device == None:
+    if device is None:
         device = 'Other'
 
     return {
-        'family': device
+        'family': device,
+        'brand': brand,
+        'model': model
     }
 
 
@@ -335,8 +374,10 @@ def ParseWithJSOverrides(user_agent_string,
                 break
 
     # Override for Chrome Frame IFF Chrome is enabled.
-    if (js_user_agent_string and js_user_agent_string.find('Chrome/') > -1 and
-        user_agent_string.find('chromeframe') > -1):
+    if (
+        js_user_agent_string and js_user_agent_string.find('Chrome/') > -1 and
+        user_agent_string.find('chromeframe') > -1
+    ):
         family = 'Chrome Frame (%s %s)' % (family, v1)
         ua_dict = ParseUserAgent(js_user_agent_string)
         v1 = ua_dict['major']
@@ -392,11 +433,11 @@ def GetFilters(user_agent_string, js_user_agent_string=None,
     """
     filters = {}
     filterdict = {
-      'js_user_agent_string': js_user_agent_string,
-      'js_user_agent_family': js_user_agent_family,
-      'js_user_agent_v1': js_user_agent_v1,
-      'js_user_agent_v2': js_user_agent_v2,
-      'js_user_agent_v3': js_user_agent_v3
+        'js_user_agent_string': js_user_agent_string,
+        'js_user_agent_family': js_user_agent_family,
+        'js_user_agent_v1': js_user_agent_v1,
+        'js_user_agent_v2': js_user_agent_v2,
+        'js_user_agent_v3': js_user_agent_v3
     }
     for key, value in filterdict.items():
         if value is not None and value != '':
@@ -405,84 +446,103 @@ def GetFilters(user_agent_string, js_user_agent_string=None,
 
 
 # Build the list of user agent parsers from YAML
-UA_PARSER_YAML = os.getenv("UA_PARSER_YAML")
-regexes = None
-
-if not UA_PARSER_YAML:
-    yamlPath = resource_filename(__name__, 'regexes.yaml')
-    json_path = resource_filename(__name__, 'regexes.json')
-else:
+UA_PARSER_YAML = os.environ.get("UA_PARSER_YAML")
+if UA_PARSER_YAML:
+    # This will raise an ImportError if missing, obviously since it's no
+    # longer a requirement
     import yaml
-
-    yamlFile = open(UA_PARSER_YAML)
-    regexes = yaml.load(yamlFile)
-    yamlFile.close()
-
-# If UA_PARSER_YAML is not specified, load regexes from regexes.json before
-# falling back to yaml format
-if regexes is None:
     try:
-        json_file = open(json_path)
-        regexes = json.loads(json_file.read())
-        json_file.close()
-    except IOError:
-        import yaml
+        # Try and use libyaml bindings if available since faster
+        from yaml import CSafeLoader as SafeLoader
+    except ImportError:
+        from yaml import SafeLoader
 
-        yamlFile = open(yamlPath)
-        regexes = yaml.load(yamlFile)
-        yamlFile.close()
+    with open(UA_PARSER_YAML) as fp:
+        regexes = yaml.load(fp, Loader=SafeLoader)
 
+    USER_AGENT_PARSERS = []
+    for _ua_parser in regexes['user_agent_parsers']:
+        _regex = _ua_parser['regex']
 
-USER_AGENT_PARSERS = []
-for _ua_parser in regexes['user_agent_parsers']:
-    _regex = _ua_parser['regex']
+        _family_replacement = None
+        if 'family_replacement' in _ua_parser:
+            _family_replacement = _ua_parser['family_replacement']
 
-    _family_replacement = None
-    if 'family_replacement' in _ua_parser:
-        _family_replacement = _ua_parser['family_replacement']
+        _v1_replacement = None
+        if 'v1_replacement' in _ua_parser:
+            _v1_replacement = _ua_parser['v1_replacement']
 
-    _v1_replacement = None
-    if 'v1_replacement' in _ua_parser:
-        _v1_replacement = _ua_parser['v1_replacement']
+        _v2_replacement = None
+        if 'v2_replacement' in _ua_parser:
+            _v2_replacement = _ua_parser['v2_replacement']
 
-    _v2_replacement = None
-    if 'v2_replacement' in _ua_parser:
-        _v2_replacement = _ua_parser['v2_replacement']
+        USER_AGENT_PARSERS.append(UserAgentParser(_regex,
+                                                  _family_replacement,
+                                                  _v1_replacement,
+                                                  _v2_replacement))
 
-    USER_AGENT_PARSERS.append(UserAgentParser(_regex,
-                                              _family_replacement,
-                                              _v1_replacement,
-                                              _v2_replacement))
+    OS_PARSERS = []
+    for _os_parser in regexes['os_parsers']:
+        _regex = _os_parser['regex']
 
-OS_PARSERS = []
-for _os_parser in regexes['os_parsers']:
-    _regex = _os_parser['regex']
+        _os_replacement = None
+        if 'os_replacement' in _os_parser:
+            _os_replacement = _os_parser['os_replacement']
 
-    _os_replacement = None
-    if 'os_replacement' in _os_parser:
-        _os_replacement = _os_parser['os_replacement']
+        _os_v1_replacement = None
+        if 'os_v1_replacement' in _os_parser:
+            _os_v1_replacement = _os_parser['os_v1_replacement']
 
-    _os_v1_replacement = None
-    if 'os_v1_replacement' in _os_parser:
-        _os_v1_replacement = _os_parser['os_v1_replacement']
+        _os_v2_replacement = None
+        if 'os_v2_replacement' in _os_parser:
+            _os_v2_replacement = _os_parser['os_v2_replacement']
 
-    _os_v2_replacement = None
-    if 'os_v2_replacement' in _os_parser:
-        _os_v2_replacement = _os_parser['os_v2_replacement']
+        _os_v3_replacement = None
+        if 'os_v3_replacement' in _os_parser:
+            _os_v3_replacement = _os_parser['os_v3_replacement']
 
-    OS_PARSERS.append(OSParser(_regex,
-                               _os_replacement,
-                               _os_v1_replacement,
-                               _os_v2_replacement))
+        _os_v4_replacement = None
+        if 'os_v4_replacement' in _os_parser:
+            _os_v4_replacement = _os_parser['os_v4_replacement']
 
+        OS_PARSERS.append(OSParser(_regex,
+                                   _os_replacement,
+                                   _os_v1_replacement,
+                                   _os_v2_replacement,
+                                   _os_v3_replacement,
+                                   _os_v4_replacement))
 
-DEVICE_PARSERS = []
-for _device_parser in regexes['device_parsers']:
-    _regex = _device_parser['regex']
+    DEVICE_PARSERS = []
+    for _device_parser in regexes['device_parsers']:
+        _regex = _device_parser['regex']
 
-    _device_replacement = None
-    if 'device_replacement' in _device_parser:
-        _device_replacement = _device_parser['device_replacement']
+        _regex_flag = None
+        if 'regex_flag' in _device_parser:
+            _regex_flag = _device_parser['regex_flag']
 
-    DEVICE_PARSERS.append(DeviceParser(_regex, _device_replacement))
+        _device_replacement = None
+        if 'device_replacement' in _device_parser:
+            _device_replacement = _device_parser['device_replacement']
 
+        _brand_replacement = None
+        if 'brand_replacement' in _device_parser:
+            _brand_replacement = _device_parser['brand_replacement']
+
+        _model_replacement = None
+        if 'model_replacement' in _device_parser:
+            _model_replacement = _device_parser['model_replacement']
+
+        DEVICE_PARSERS.append(DeviceParser(_regex,
+                                           _regex_flag,
+                                           _device_replacement,
+                                           _brand_replacement,
+                                           _model_replacement))
+
+    # Clean our our temporary vars explicitly
+    # so they can't be reused or imported
+    del regexes
+    del yaml
+    del SafeLoader
+else:
+    # Just load our pre-compiled versions
+    from ._regexes import USER_AGENT_PARSERS, DEVICE_PARSERS, OS_PARSERS

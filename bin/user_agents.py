@@ -1,9 +1,14 @@
 import urllib,csv,re,sys,os,numbers,itertools,logging
+
+ROOT_DIR = os.path.abspath(os.path.dirname(__file__))
+DATA_FILE = os.path.abspath(os.path.join(ROOT_DIR, 'uap-core', 'regexes.yaml'))
+os.environ['UA_PARSER_YAML'] = DATA_FILE
+
 from ua_parser import user_agent_parser
 
 # The following log levels are available:
 # Debug (NOISY!!!):
-LOG_LEVEL = logging.ERROR
+LOG_LEVEL = logging.DEBUG
 # Info:
 # LOG_LEVEL = logging.INFO
 # Error:
@@ -22,7 +27,7 @@ if __name__ == '__main__':
     r = csv.reader(sys.stdin)
     w = csv.writer(sys.stdout)
     have_header = False
-    
+
     header = []
     idx = -1
     for row in r:
@@ -37,12 +42,12 @@ if __name__ == '__main__':
                 z = z + 1
             w.writerow(row)
             continue
-        
+
         # We only care about the cs_user_agent field - everything else is filled in
         http_user_agent = row[idx]
         useragent = urllib.unquote_plus(http_user_agent)
         logger.debug('found useragent %s' % http_user_agent)
-        
+
         logger.debug('sending to ua-parser')
         results = []
         try:
@@ -105,5 +110,5 @@ if __name__ == '__main__':
                 orow.append(forSplunk[header_name])
         w.writerow(orow)
         logger.debug('done output')
-            
+
 
