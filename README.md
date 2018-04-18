@@ -57,10 +57,9 @@ https://github.com/ua-parser
 Icons made by [Freepik](http://www.freepik.com) from [Flaticon](http://www.flaticon.com) is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)
 
 ## Change log
-### v 1.7
+### v 1.7.0
 * Created script to automate the upgrading of the latest versions of ua-parser
-* Imported the latest version of the ua-parser
-* Note: The regexes.yaml file moved from ua-parser to uap-core
+* Imported the latest version of Python libraries ua-parser and PyYAML
 
 ### v 1.6
 * Updated to the latest version of the ua-parser
