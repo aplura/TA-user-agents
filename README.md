@@ -25,7 +25,7 @@ The lookup will output the following fields:
   * ua_device: The type of device used in the event.
 
 ## Customization
-To add your own user agents, you can use the YAML file in TA-user-agents/bin/ua_parser/ named regexes.yaml.
+To add your own user agents, you can use the YAML file in TA-user-agents/bin/uap-core/ named regexes.yaml.
 
 ## Support
 Support is on a best-effort basis. Need help? Use the Splunk community resources! I can be found on many of them:
@@ -42,6 +42,12 @@ This TA uses a Python module from:
 https://github.com/ua-parser
 
 Icons made by [Freepik](http://www.freepik.com) from [Flaticon](http://www.flaticon.com) is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)
+
+## Change log
+### v 1.7
+* Created script to automate the upgrading of the latest versions of ua-parser
+* Imported the latest version of the ua-parser
+* Note: The regexes.yaml file moved from ua-parser to uap-core
 
 ## Change log
 ### v 1.6
