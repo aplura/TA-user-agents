@@ -1,2 +1,5 @@
 # Compiled python files
 *.py[co]
+
+# Temporary git clone location (fetch_latest.sh script)
+bin/repos
