@@ -11,7 +11,9 @@ To install:
 
 ## Usage
 The lookup expects a field in the events (http_user_agent). Once that field exists (via extractions, alias or rename). Once that field exists, you can use it in a lookup command, as such:
+
     index=web_proxy | lookup user_agents http_user_agent
+
 The lookup will output the following fields:
   * ua_os_family: The name of the client OS.
   * ua_os_major: The major version of the client OS.
@@ -26,6 +28,17 @@ The lookup will output the following fields:
 
 ## Customization
 To add your own user agents, you can use the YAML file in TA-user-agents/bin/uap-core/ named regexes.yaml.
+
+## Refreshing the BrowserScope database
+To update user agent string data run the `bin/refresh_latest.sh` script.  This will update not only the browser strings information (`regexes.yaml`), but the python module as well.  If you'd like to run this on a regular basis, consider setting this up as a cron job, or as a scripted input at an appropriate interval.
+
+For example, to refresh every Monday at 4AM, add the following `inputs.conf` entry:
+
+    [script://./bin/fetch_latest.sh local]
+    interval = 0 4 * * 1
+    index = _internal
+
+Note:  This script on works on Unix, requires `git`, and will clobber any local customizations to `regexes.yaml`.
 
 ## Support
 Support is on a best-effort basis. Need help? Use the Splunk community resources! I can be found on many of them:
