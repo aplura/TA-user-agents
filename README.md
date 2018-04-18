@@ -62,7 +62,6 @@ Icons made by [Freepik](http://www.freepik.com) from [Flaticon](http://www.flati
 * Imported the latest version of the ua-parser
 * Note: The regexes.yaml file moved from ua-parser to uap-core
 
-## Change log
 ### v 1.6
 * Updated to the latest version of the ua-parser
 * Changed URL for the ua-parser to the new project page
