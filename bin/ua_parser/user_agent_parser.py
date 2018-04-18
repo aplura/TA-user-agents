@@ -16,10 +16,10 @@
 
 from __future__ import absolute_import
 
-__author__ = 'Lindsey Simon <elsigh@gmail.com>'
-
 import os
 import re
+
+__author__ = 'Lindsey Simon <elsigh@gmail.com>'
 
 
 class UserAgentParser(object):
@@ -117,7 +117,10 @@ class OSParser(object):
                 os = match.group(1)
 
             if self.os_v1_replacement:
-                os_v1 = self.os_v1_replacement
+                if re.search(r'\$1', self.os_v1_replacement):
+                    os_v1 = re.sub(r'\$1', match.group(1), self.os_v1_replacement)
+                else:
+                    os_v1 = self.os_v1_replacement
             elif match.lastindex and match.lastindex >= 2:
                 os_v1 = match.group(2)
 
@@ -140,7 +143,8 @@ class OSParser(object):
 
 
 class DeviceParser(object):
-    def __init__(self, pattern, regex_flag=None, device_replacement=None, brand_replacement=None, model_replacement=None):
+    def __init__(self, pattern, regex_flag=None, device_replacement=None, brand_replacement=None,
+                 model_replacement=None):
         """Initialize UserAgentParser.
 
         Args:

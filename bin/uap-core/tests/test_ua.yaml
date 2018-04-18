@@ -192,11 +192,29 @@ test_cases:
     minor: '8'
     patch: '5'
 
+  - user_agent_string: 'Mozilla/5.0 (compatible; Windows NT 6.1; Catchpoint) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36'
+    family: 'Catchpoint'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (compatible; Windows NT 6.1; Catchpoint bot) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36'
+    family: 'Catchpoint bot'
+    major:
+    minor:
+    patch:
+
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; chromeframe/11.0.660.0)'
     family: 'Chrome Frame'
     major: '11'
     minor: '0'
     patch: '660'
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; Android 7.1.2; Nexus 5X Build/N2G47W; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36'
+    family: 'Chrome Mobile WebView'
+    major: '58'
+    minor: '0'
+    patch: '3029'
 
   - user_agent_string: 'Mozilla/5.0 (Linux; Android 4.2; Galaxy Nexus Build/JOP40C) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19'
     family: 'Chrome Mobile'
@@ -264,11 +282,23 @@ test_cases:
     minor:
     patch:
 
+  - user_agent_string: 'Firefox/11.0 (via ggpht.com GoogleImageProxy)'
+    family: 'GmailImageProxy'
+    major:
+    minor:
+    patch:
+
   - user_agent_string: 'Twitterbot/1.0'
     family: 'TwitterBot'
     major: '1'
     minor: '0'
     patch:
+
+  - user_agent_string: 'WhatsApp/2.17.70 W'
+    family: 'WhatsApp'
+    major: '2'
+    minor: '17'
+    patch: '70'
 
   - user_agent_string: 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.1.1pre) Gecko/20090717 Ubuntu/9.04 (jaunty) Shiretoko/3.5.1pre'
     family: 'Firefox (Shiretoko)'
@@ -466,6 +496,12 @@ test_cases:
     family: 'Mobile Safari'
     major: '5'
     minor: '0'
+    patch: '2'
+
+  - user_agent_string: 'Mozilla/5.0 (iPod touch; CPU iPhone OS 9_3_2 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13F69'
+    family: 'Mobile Safari UI/WKWebView'
+    major: '9'
+    minor: '3'
     patch: '2'
 
   - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 7_1_2 like Mac OS X) AppleWebKit/537.51.2 (KHTML, like Gecko) Mobile/11D257'
@@ -757,10 +793,28 @@ test_cases:
     patch: '2'
 
   - user_agent_string: 'Mozilla/5.0 (Windows NT 5.1; rv:2.0) Gecko/20110407 Firefox/4.0.3 PaleMoon/4.0.3'
-    family: 'Pale Moon (Firefox Variant)'
+    family: 'Pale Moon'
     major: '4'
     minor: '0'
     patch: '3'
+
+  - user_agent_string: 'Mozilla/5.0 (X11; Linux x86_64; rv:3.0) Goanna/20170207 PaleMoon/27.1.0'
+    family: 'Pale Moon'
+    major: '27'
+    minor: '1'
+    patch: '0'
+
+  - user_agent_string: 'Mozilla/5.0 (X11; Linux x86_64; rv:3.0) Gecko/20100101 Goanna/20170207 PaleMoon/27.1.0'
+    family: 'Pale Moon'
+    major: '27'
+    minor: '1'
+    patch: '0'
+
+  - user_agent_string: 'Mozilla/5.0 (X11; Linux x86_64; rv:45.9) Gecko/20100101 Goanna/3.0 Firefox/45.9 PaleMoon/27.1.0'
+    family: 'Pale Moon'
+    major: '27'
+    minor: '1'
+    patch: '0'
 
   - user_agent_string: 'Mozilla/5.0 (LG-T500 AppleWebkit/531 Browser/Phantom/V2.0 Widget/LGMW/3.0 MMS/LG-MMS-V1.0/1.2 Java/ASVM/1.1 Profile/MIDP-2.1 Configuration/CLDC-1.1)'
     family: 'Phantom Browser'
@@ -772,6 +826,24 @@ test_cases:
     family: 'PingdomBot'
     major: '1'
     minor: '4'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/534.34 (KHTML, like Gecko) PingdomTMS/0.8.5 Safari/534.34'
+    family: 'PingdomBot'
+    major: '0'
+    minor: '8'
+    patch: '5'
+
+  - user_agent_string: 'NewRelicPinger/1.0 (1025794)'
+    family: 'NewRelicPingerBot'
+    major: '1'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.4 (KHTML, like Gecko) Chrome/98 Safari/537.4 (StatusCake)'
+    family: 'StatusCakeBot'
+    major:
+    minor:
     patch:
 
   - user_agent_string: 'Mozilla/3.0 (Planetweb/2.100 JS SSL US; Dreamcast US)'
@@ -853,16 +925,70 @@ test_cases:
     patch: '5'
 
   - user_agent_string: 'Mozilla/5.0 (X11; Linux x86_64; rv:24.0) Gecko/20100101 Thunderbird/24.2.0 Lightning/2.6.4'
-    family: 'Lightning'
-    major: '2'
-    minor: '6'
-    patch: '4'
+    family: 'Thunderbird'
+    major: '24'
+    minor: '2'
+    patch: '0'
 
   - user_agent_string: 'Mozilla/5.0 (X11; Linux x86_64; rv:24.0) Gecko/20100101 Thunderbird/24.2.0'
     family: 'Thunderbird'
     major: '24'
     minor: '2'
     patch: '0'
+
+  - user_agent_string: 'Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Thunderbird/45.0'
+    family: 'Thunderbird'
+    major: '45'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:7.0.1) Gecko/20151105 Postbox/4.0.8'
+    family: 'Postbox'
+    major: '4'
+    minor: '0'
+    patch: '8'
+
+  - user_agent_string: 'Mozilla/4.0 (compatible; Lotus-Notes/6.0; Windows-NT)'
+    family: 'Lotus Notes'
+    major: '6'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'YahooMobileMail/1.0 (Android Mail; 1.3.10) (supersonic;HTC;PC36100;2.3.5/GRJ90)'
+    family: 'YahooMobileMail'
+    major: '1'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'Barca/2.8.2'
+    family: 'Barca'
+    major: '2'
+    minor: '8'
+    patch: '2'
+
+  - user_agent_string: 'BarcaPro/1.4.12'
+    family: 'Barca'
+    major: '1'
+    minor: '4'
+    patch: '12'
+
+  - user_agent_string: 'The Bat! 4.0.0.22'
+    family: 'The Bat!'
+    major: '4'
+    minor: '0'
+    patch: '0'
+
+  - user_agent_string: 'MailBar/1.3.2 (Mac OS X Version 10.11.1 (Build 15B42))'
+    family: 'MailBar'
+    major: '1'
+    minor: '3'
+    patch: '2'
+
+  - user_agent_string: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.34 (KHTML, like Gecko) kmail2/4.14.2 Safari/534.34'
+    family: 'kmail2'
+    major: '4'
+    minor: '14'
+    patch: '2'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322; .NET CLR 2.0.50727; MSOffice 12)'
     family: 'Outlook'
@@ -912,6 +1038,18 @@ test_cases:
     minor: '4'
     patch: '0'
 
+  - user_agent_string: 'UCWEB/3.0 (iPhone; CPU OS_6; en-US)AppleWebKit/534.1 U3/3.0.0 Mobile'
+    family: 'UC Browser'
+    major: '3'
+    minor: '0'
+    patch: '0'
+
+  - user_agent_string: 'UCWEB/2.0 (Linux; U; Opera Mini/7.1.32052/30.2697; en-US; GT-S5302) U2/1.0.0 UCBrowser/9.3.0.440 Mobile'
+    family: 'UC Browser'
+    major: '9'
+    minor: '3'
+    patch: '0'
+
   - user_agent_string: 'IUC(U;iOS 5.1.1;Zh-cn;320*480;)/UCWEB7.9.0.94/41/997'
     family: 'UC Browser'
     major: '7'
@@ -935,6 +1073,12 @@ test_cases:
     major: '8'
     minor: '7'
     patch: '0'
+
+  - user_agent_string: 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 UBrowser/5.7.14488.1025 Safari/537.36'
+    family: 'UC Browser'
+    major: '5'
+    minor: '7'
+    patch: '14488'
 
   - user_agent_string: 'Alcatel-OH5/1.0 UP.Browser/6.1.0.7.7 (GUI) MMP/1.0'
     family: 'UP.Browser'
@@ -1316,164 +1460,164 @@ test_cases:
     patch_minor:
 
   - user_agent_string: 'Safari/6533.18.5 CFNetwork/454.9.8 Darwin/10.4.0 (i386) (MacBookPro7,1)'
-    family: 'CFNetwork'
-    major: '454'
-    minor: '9'
-    patch: '8'
+    family: 'Safari'
+    major: '6533'
+    minor: '18'
+    patch: '5'
     patch_minor:
 
   - user_agent_string: 'Safari/7536.30.1 CFNetwork/520.5.1 Darwin/11.4.2 (i386) (MacBook3,1)'
-    family: 'CFNetwork'
-    major: '520'
-    minor: '5'
+    family: 'Safari'
+    major: '7536'
+    minor: '30'
     patch: '1'
     patch_minor:
 
   - user_agent_string: 'Reader Notifier/5 CFNetwork/596.3.3 Darwin/12.3.0 (x86_64) (MacBookPro7,1)'
-    family: 'CFNetwork'
-    major: '596'
-    minor: '3'
-    patch: '3'
+    family: 'Reader Notifier'
+    major: '5'
+    minor:
+    patch:
     patch_minor:
 
   - user_agent_string: 'Safari/9537.71 CFNetwork/673.0.2 Darwin/13.0.1 (x86_64) (MacBookPro11,1)'
-    family: 'CFNetwork'
-    major: '673'
-    minor: '0'
-    patch: '2'
+    family: 'Safari'
+    major: '9537'
+    minor: '71'
+    patch:
     patch_minor:
 
   - user_agent_string: 'DEPoker-iPad/1.0.2 CFNetwork/548.1.4 Darwin/11.0.0'
-    family: 'CFNetwork'
-    major: '548'
-    minor: '1'
-    patch: '4'
+    family: 'DEPoker'
+    major: '1'
+    minor: '0'
+    patch: '2'
     patch_minor:
 
   - user_agent_string: 'JDSports-iPad/1.1 CFNetwork/672.0.8 Darwin/14.0.0'
-    family: 'CFNetwork'
-    major: '672'
-    minor: '0'
-    patch: '8'
+    family: 'JDSports'
+    major: '1'
+    minor: '1'
+    patch:
     patch_minor:
 
   - user_agent_string: 'AngryBirdsBlack-iPhone/1.1.0 CFNetwork/548.1.4 Darwin/11.0.0'
-    family: 'CFNetwork'
-    major: '548'
+    family: 'AngryBirdsBlack'
+    major: '1'
     minor: '1'
-    patch: '4'
+    patch: '0'
     patch_minor:
 
   - user_agent_string: 'Bing for iPad/1.1.2 CFNetwork/485.13.9 Darwin/11.0.0'
-    family: 'CFNetwork'
-    major: '485'
-    minor: '13'
-    patch: '9'
+    family: 'Bing for iPad'
+    major: '1'
+    minor: '1'
+    patch: '2'
     patch_minor:
 
   - user_agent_string: 'NightstandPaid-iPad/1.3.1 CFNetwork/548.1.4 Darwin/11.0.0'
-    family: 'CFNetwork'
-    major: '548'
-    minor: '1'
-    patch: '4'
+    family: 'NightstandPaid'
+    major: '1'
+    minor: '3'
+    patch: '1'
     patch_minor:
 
   - user_agent_string: 'Glo-De-iPad/1.4.7 CFNetwork/672.0.2 Darwin/14.0.0'
-    family: 'CFNetwork'
-    major: '672'
-    minor: '0'
-    patch: '2'
+    family: 'Glo-De'
+    major: '1'
+    minor: '4'
+    patch: '7'
     patch_minor:
 
   - user_agent_string: 'Island for iPhone/1.95 CFNetwork/672.0.2 Darwin/14.0.0'
-    family: 'CFNetwork'
-    major: '672'
-    minor: '0'
-    patch: '2'
+    family: 'Island for iPhone'
+    major: '1'
+    minor: '95'
+    patch:
     patch_minor:
 
   - user_agent_string: 'WormsiPhone-iPad/2.3 CFNetwork/548.1.4 Darwin/11.0.0'
-    family: 'CFNetwork'
-    major: '548'
-    minor: '1'
-    patch: '4'
+    family: 'WormsiPhone'
+    major: '2'
+    minor: '3'
+    patch:
     patch_minor:
 
   - user_agent_string: 'Rummy LITE iPad/2.3.0 CFNetwork/609.1.4 Darwin/13.0.0'
-    family: 'CFNetwork'
-    major: '609'
-    minor: '1'
-    patch: '4'
+    family: 'Rummy LITE iPad'
+    major: '2'
+    minor: '3'
+    patch: '0'
     patch_minor:
 
   - user_agent_string: 'MobileRSSFree-iPad/3.1 CFNetwork/467.12 Darwin/10.3.1'
-    family: 'CFNetwork'
-    major: '467'
-    minor: '12'
+    family: 'MobileRSSFree'
+    major: '3'
+    minor: '1'
     patch:
     patch_minor:
 
   - user_agent_string: 'MobileRSSFree-iPad/3.1.4 CFNetwork/485.13.9 Darwin/11.0.0'
-    family: 'CFNetwork'
-    major: '485'
-    minor: '13'
-    patch: '9'
+    family: 'MobileRSSFree'
+    major: '3'
+    minor: '1'
+    patch: '4'
     patch_minor:
 
   - user_agent_string: 'babbelIndonesian-iPad/4.0.1 CFNetwork/672.0.8 Darwin/14.0.0'
-    family: 'CFNetwork'
-    major: '672'
+    family: 'babbelIndonesian'
+    major: '4'
     minor: '0'
-    patch: '8'
+    patch: '1'
     patch_minor:
 
   - user_agent_string: 'WeltMobile-iPad/4.2 CFNetwork/609.1.4 Darwin/13.0.0'
-    family: 'CFNetwork'
-    major: '609'
-    minor: '1'
-    patch: '4'
+    family: 'WeltMobile'
+    major: '4'
+    minor: '2'
+    patch:
     patch_minor:
 
   - user_agent_string: 'IMPlusFull-iPad/7.9.1 CFNetwork/548.0.4 Darwin/11.0.0'
-    family: 'CFNetwork'
-    major: '548'
-    minor: '0'
-    patch: '4'
+    family: 'IMPlusFull'
+    major: '7'
+    minor: '9'
+    patch: '1'
     patch_minor:
 
   - user_agent_string: 'Cooliris/1.3 CFNetwork/342.1 Darwin/9.4.1'
-    family: 'CFNetwork'
-    major: '342'
-    minor: '1'
+    family: 'Cooliris'
+    major: '1'
+    minor: '3'
     patch:
     patch_minor:
 
   - user_agent_string: 'Poof/1.0 CFNetwork/485.12.7 Darwin/10.4.0'
-    family: 'CFNetwork'
-    major: '485'
-    minor: '12'
-    patch: '7'
+    family: 'Poof'
+    major: '1'
+    minor: '0'
+    patch:
     patch_minor:
 
   - user_agent_string: 'Parking Mania Free/1.9.5.0 CFNetwork/548.0.4 Darwin/11.0.0'
-    family: 'CFNetwork'
-    major: '548'
-    minor: '0'
-    patch: '4'
-    patch_minor:
+    family: 'Parking Mania Free'
+    major: '1'
+    minor: '9'
+    patch: '5'
+    patch_minor: '0'
 
   - user_agent_string: 'Planet Boing!/1.4.8 CFNetwork/609.1.4 Darwin/13.0.0'
-    family: 'CFNetwork'
-    major: '609'
-    minor: '1'
-    patch: '4'
+    family: 'Planet Boing!'
+    major: '1'
+    minor: '4'
+    patch: '8'
     patch_minor:
 
   - user_agent_string: 'PlayTube/1.7 CFNetwork/672.0.2 Darwin/14.0.0'
-    family: 'CFNetwork'
-    major: '672'
-    minor: '0'
-    patch: '2'
+    family: 'PlayTube'
+    major: '1'
+    minor: '7'
+    patch:
     patch_minor:
 
   - user_agent_string: 'Mozilla/5.0 (Linux; U; Android 2.2.1; es-us) AppleWebKit/534.12 (KHTML, like Gecko) Puffin/1.3.2913S Mobile Safari/534.12'
@@ -1696,10 +1840,10 @@ test_cases:
     patch:
 
   - user_agent_string: 'Argus/2.8.65 CFNetwork/609 Darwin/13.0.0'
-    family: 'CFNetwork'
-    major:
-    minor:
-    patch:
+    family: 'Argus'
+    major: '2'
+    minor: '8'
+    patch: '65'
 
   - user_agent_string: 'DoCoMo/2.0 P05A(c100;TB;W24H15) (compatible; BaiduMobaider/1.0;  http://www.baidu.jp/spider/)'
     family: 'BaiduMobaider'
@@ -2223,6 +2367,24 @@ test_cases:
     minor:
     patch:
 
+  - user_agent_string: 'Google Web Preview'
+    family: 'Other'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36'
+    family: 'Chrome'
+    major: '60'
+    minor: '0'
+    patch: '3112'
+
+  - user_agent_string: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko; Google Web Preview) Chrome/27.0 .1453 Safari/537.36.'
+    family: 'Chrome'
+    major: '27'
+    minor: '0'
+    patch:
+
   - user_agent_string: 'HiddenMarket-1.0-beta (www.hiddenmarket.net/crawler.php)'
     family: 'HiddenMarket'
     major:
@@ -2506,10 +2668,10 @@ test_cases:
     patch:
 
   - user_agent_string: 'RedCarpet/2.1 CFNetwork/672.0.2 Darwin/14.0.0'
-    family: 'CFNetwork'
-    major: '672'
-    minor: '0'
-    patch: '2'
+    family: 'RedCarpet'
+    major: '2'
+    minor: '1'
+    patch:
 
   - user_agent_string: 'Riddler (http://riddler.io/about.html)'
     family: 'Riddler'
@@ -5775,6 +5937,12 @@ test_cases:
     minor:
     patch:
 
+  - user_agent_string: 'NL-Crawler'
+    family: 'NL-Crawler'
+    major:
+    minor:
+    patch:
+
   - user_agent_string: 'Mozilla/5.0 (compatible; YoudaoBot-rts/1.0; http://www.youdao.com/help/webmaster/spider/; )'
     family: 'YoudaoBot'
     major:
@@ -6315,6 +6483,12 @@ test_cases:
     minor: '9'
     patch:
 
+  - user_agent_string: '[FBAN/FB4A;FBAV/130.0.321;FBBV/149649;FBDM/{density=1.5,width=480,height=800};FBLC/es_ES;FBCR/;FBPN/com.facebook.katana;FBDV/LG-P920;FBSV/2.2.2;]'
+    family: 'Facebook'
+    major: '130'
+    minor: '0'
+    patch: '321'
+
   - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 6_1_4 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Mobile/10B350 [Pinterest/iOS]'
     family: 'Pinterest'
     major:
@@ -6369,35 +6543,65 @@ test_cases:
     minor: '2'
     patch:
 
+  - user_agent_string: 'Pinterest for Android/1.1.12 (endeavoru; 4.1.1)'
+    family: 'Pinterest'
+    major: '1'
+    minor: '1'
+    patch: '12'
+
   - user_agent_string: 'Pinterest/3.2 CFNetwork/672.0.8 Darwin/14.0.0'
-    family: 'CFNetwork'
-    major: '672'
-    minor: '0'
-    patch: '8'
+    family: 'Pinterest'
+    major: '3'
+    minor: '2'
+    patch:
 
   - user_agent_string: 'Pinterest/3.3.3 CFNetwork/609.1.4 Darwin/13.0.0'
-    family: 'CFNetwork'
-    major: '609'
-    minor: '1'
-    patch: '4'
+    family: 'Pinterest'
+    major: '3'
+    minor: '3'
+    patch: '3'
 
   - user_agent_string: 'Pinterest/3356 CFNetwork/711.0.6 Darwin/14.0.0'
-    family: 'CFNetwork'
-    major: '711'
-    minor: '0'
-    patch: '6'
+    family: 'Pinterest'
+    major: '3356'
+    minor:
+    patch:
 
   - user_agent_string: 'Pinterest/4.1.3 CFNetwork/672.1.14 Darwin/14.0.0'
-    family: 'CFNetwork'
-    major: '672'
+    family: 'Pinterest'
+    major: '4'
     minor: '1'
-    patch: '14'
+    patch: '3'
+
+  - user_agent_string: 'Pinterest/0.2 (+https://www.pinterest.com/bot.html)'
+    family: 'Pinterestbot'
+    major: '0'
+    minor: '2'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (compatible; Pinterestbot/1.0; +https://www.pinterest.com/bot.html)'
+    family: 'Pinterestbot'
+    major: '1'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible; Pinterestbot/1.0; +https://www.pinterest.com/bot.html)'
+    family: 'Pinterestbot'
+    major: '1'
+    minor: '0'
+    patch:
 
   - user_agent_string: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) qutebrowser/0.2.1 Safari/538.1'
     family: 'qutebrowser'
     major: '0'
     minor: '2'
     patch: '1'
+
+  - user_agent_string: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) pagedraw/0.1.0 Chrome/49.0.2623.75 Electron/0.37.8 Safari/537.36'
+    family: 'Electron'
+    major: '0'
+    minor: '37'
+    patch: '8'
 
   - user_agent_string: 'Mozilla/5.0 (iPad; U; CPU OS 4_3_2 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile'
     family: 'Mobile Safari UI/WKWebView'
@@ -6495,6 +6699,24 @@ test_cases:
     minor: '7'
     patch: '10'
 
+  - user_agent_string: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome Safari/537.36'
+    family: 'HeadlessChrome'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/62.0.3202.89 Safari/537.36'
+    family: 'HeadlessChrome'
+    major: '62'
+    minor: '0'
+    patch: '3202'
+
+  - user_agent_string: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/59.0.3071.109 HeadlessChrome/59.0.3071.109 Safari/537.36'
+    family: 'HeadlessChrome'
+    major: '59'
+    minor: '0'
+    patch: '3071'
+
   - user_agent_string: 'Roku/DVP-6.2 (096.02E06005A)'
     family: 'Roku'
     major: '6'
@@ -6585,3 +6807,627 @@ test_cases:
     minor:
     patch:
 
+  - user_agent_string: 'Mozilla/5.0 (Linux; Android 5.0.1; GT-I9505 Build/LRX22C) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 YaBrowser/16.2.1.1239.00 Mobile Safari/537.36'
+    family: 'Yandex Browser'
+    major: '16'
+    minor: '2'
+    patch: '1'
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; Android 4.4.2; SM-G800F Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.135 MobileIron/1.6.0 Mobile Safari/537.36'
+    family: 'MobileIron'
+    major: '1'
+    minor: '6'
+    patch: '0'
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; Android 4.4.4; GT-I9195I Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.130 Crosswalk/14.43.343.17 Mobile Safari/537.36'
+    family: 'Crosswalk'
+    major: '14'
+    minor: '43'
+    patch: '343'
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; Android 6.0.1; Z831 Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.94 Mobile Crosswalk/11.45.2454.20160425 Mobile Safari/537.36'
+    family: 'Crosswalk'
+    major: '11'
+    minor: '45'
+    patch: '2454'
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; Android 4.1.2; GT-S7710 Build/JZO54K) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile'
+    family: 'Chrome Mobile'
+    major: '18'
+    minor: '0'
+    patch: '1025'
+
+  - user_agent_string: 'Mozilla/5.0 (iPad; U; CPU OS 5_1_1 like Mac OS X; en-us) AppleWebKit/534.46.0 (KHTML, like Gecko) Chrome/19.0.1084.60 Mobile/9B206 Safari/7534.48.3'
+    family: 'Chrome Mobile'
+    major: '19'
+    minor: '0'
+    patch: '1084'
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; U; Android 4.4.4; de-de; SM-G850F Build/KTU84P) AppleWebKit/537.16 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.16 Chrome/33.0.0.0'
+    family: 'Chrome Mobile'
+    major: '33'
+    minor: '0'
+    patch: '0'
+
+  - user_agent_string: 'Mozilla/5.0 (Web0S; Linux/SmartTV) AppleWebKit/537.41 (KHTML, like Gecko) Large Screen WebAppManager Safari/537.41'
+    family: 'Safari'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'MacOutlook/15.27.0.161010 (Intelx64 Mac OS X Version 10.11.6 (Build 15G1108))'
+    family: 'MacOutlook'
+    major: '15'
+    minor: '27'
+    patch: '0'
+
+  - user_agent_string: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/601.7.8 (KHTML, like Gecko) Slack_SSB/2.0.3'
+    family: 'Slack Desktop Client'
+    major: '2'
+    minor: '0'
+    patch: '3'
+
+  - user_agent_string: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) AtomShell/2.6.0 Chrome/56.0.2924.87 Electron/1.6.3 Safari/537.36 MacAppStore/16.5.0 Slack_SSB/2.6.0'
+    family: 'Slack Desktop Client'
+    major: '2'
+    minor: '6'
+    patch: '0'
+
+  - user_agent_string: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Slack/2.6.0-beta18998559 Chrome/56.0.2924.87 AtomShell/1.6.3 Safari/537.36 Slack_SSB/2.6.0'
+    family: 'Slack Desktop Client'
+    major: '2'
+    minor: '6'
+    patch: '0'
+
+  - user_agent_string: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/603.1.30 (KHTML, like Gecko) HipChat/732 (modern)'
+    family: 'HipChat Desktop Client'
+    major: '732'
+    minor:
+    patch:
+
+  - user_agent_string: 'HipChat Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) QtWebEngine/5.7.0 Chrome/49.0.2623.111 Safari/537.36'
+    family: 'HipChat Desktop Client'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'Microsoft-CryptoAPI/6.1'
+    family: 'Microsoft-CryptoAPI'
+    major: '6'
+    minor: '1'
+    patch:
+
+  - user_agent_string: 'Microsoft SkyDriveSync 17.3.6517.0809 ship; Windows NT 6.1 Service Pack 1 (7601)'
+    family: 'Microsoft SkyDriveSync'
+    major: '17'
+    minor: '3'
+    patch: '6517'
+
+  - user_agent_string: 'ExchangeServicesClient/14.02.0051.000'
+    family: 'ExchangeServicesClient'
+    major: '14'
+    minor: '02'
+    patch: '0051'
+
+  - user_agent_string: 'Mac OS X/10.11.6 (15G1004); ExchangeWebServices/6.0 (243); Mail/9.3 (3124)'
+    family: 'ExchangeWebServices'
+    major: '6'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0+(iPhone;+CPU+iPhone+OS+9_3_1+like+Mac+OS+X)+AppleWebKit/601.1.46+(KHTML,+like+Gecko)+Version/9.0+Mobile/13E238+Safari/601.1'
+    family: 'Mobile Safari'
+    major: '9'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0+(iPad;+CPU+OS+9_3_1+like+Mac+OS+X)+AppleWebKit/601.1.46+(KHTML,+like+Gecko)+Version/9.0+Mobile/13E238+Safari/601.1'
+    family: 'Mobile Safari'
+    major: '9'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'Slackbot-LinkExpanding 1.0 (+https://api.slack.com/robots)'
+    family: 'Slackbot-LinkExpanding'
+    major: '1'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'Slack-ImgProxy 1.136 (+https://api.slack.com/robots)'
+    family: 'Slack-ImgProxy'
+    major: '1'
+    minor: '136'
+    patch:
+
+  - user_agent_string: 'okhttp/3.4.2'
+    family: 'okhttp'
+    major: '3'
+    minor: '4'
+    patch: '2'
+
+  - user_agent_string: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1300.0 Iron/23.0.1300.0 Safari/537.11'
+    family: 'Iron'
+    major: '23'
+    minor: '0'
+    patch: '1300'
+
+  - user_agent_string: 'Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.13 (KHTML, like Gecko) Iron/9.0.600.2 Chrome/9.0.600.2 Safari/534.13'
+    family: 'Iron'
+    major: '9'
+    minor: '0'
+    patch: '600'
+
+  - user_agent_string: 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2750.0 Iron Safari/537.36'
+    family: 'Iron'
+    major: '52'
+    minor: '0'
+    patch: '2750'
+
+  - user_agent_string: 'Mozilla/5.0 (Android; U; en-US) AppleWebKit/533.19.4 (KHTML, like Gecko) AdobeAIR/23.0'
+    family: 'AdobeAIR'
+    major: '23'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-US) AppleWebKit/533.19.4 (KHTML, like Gecko) AdobeAIR/19.0'
+    family: 'AdobeAIR'
+    major: '19'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (iOS; U; en-US) AppleWebKit/533.19.4 (KHTML, like Gecko) AdobeAIR/19.0'
+    family: 'AdobeAIR'
+    major: '19'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'Kurio/3.0.8 Build 65303(Android Kitkat 4.4.4; Phone)'
+    family: 'Kurio App'
+    major: '3'
+    minor: '0'
+    patch: '8'
+
+  - user_agent_string: 'BacaBerita App/5.5.0 (Linux; U; Android 4.4.4; en-us) Mobile Safari'
+    family: 'BacaBerita App'
+    major: '5'
+    minor: '5'
+    patch: '0'
+
+  - user_agent_string: 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) MxBrowser/4.5.2.2000 Chrome/30.0.1551.0 Safari/537.36'
+    family: 'Maxthon'
+    major: '4'
+    minor: '5'
+    patch: '2'
+
+  - user_agent_string: 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Maxthon/4.4.5.1000 Chrome/30.0.1599.101 Safari/537.36'
+    family: 'Maxthon'
+    major: '4'
+    minor: '4'
+    patch: '5'
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; Android 7.0; SM-G930P Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36 MxBrowser/4.5.10.7000'
+    family: 'Maxthon'
+    major: '4'
+    minor: '5'
+    patch: '10'
+
+  - user_agent_string: 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.6 (KHTML, like Gecko) Chrome/18.0.1025.133 Safari/537.6 Midori/0.5'
+    family: 'Midori'
+    major: '0'
+    minor: '5'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (iPad; U; CPU like Mac OS X; FIT_LANG_REPLACE) AppleWebKit/532+ (KHTML, like Gecko) Version/3.0 Mobile/1A538b Safari/419.3 Midori/0.4'
+    family: 'Midori'
+    major: '0'
+    minor: '4'
+    patch:
+
+  - user_agent_string: 'curl/7.29.0'
+    family: 'curl'
+    major: '7'
+    minor: '29'
+    patch: '0'
+
+  - user_agent_string: 'Debian APT-HTTP/1.3 (1.0.1ubuntu2)'
+    family: 'Debian APT-HTTP'
+    major: '1'
+    minor: '3'
+    patch:
+
+  - user_agent_string: 'jupdate'
+    family: 'jupdate'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'libcurl-agent/1.0'
+    family: 'libcurl-agent'
+    major: '1'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'libwww-perl/6.05'
+    family: 'libwww-perl'
+    major: '6'
+    minor: '05'
+    patch:
+
+  - user_agent_string: 'Microsoft-CryptoAPI/6.3'
+    family: 'Microsoft-CryptoAPI'
+    major: '6'
+    minor: '3'
+    patch:
+
+  - user_agent_string: 'OpenBSD ftp'
+    family: 'OpenBSD ftp'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'SophosAgent/1.0 (type= spa )'
+    family: 'SophosAgent'
+    major: '1'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'SophosUpdateManager/1.5.7.50 SDDS/2.0 (u= EO2ANA123G c= 6342da15-f351-4ab7-9656-3f5f2d50885d )'
+    family: 'SophosUpdateManager'
+    major: '1'
+    minor: '5'
+    patch: '7'
+
+  - user_agent_string: 'Ubuntu APT-HTTP/1.3 (0.7.20.2ubuntu6)'
+    family: 'Ubuntu APT-HTTP'
+    major: '1'
+    minor: '3'
+    patch:
+
+  - user_agent_string: 'urlgrabber/3.10 yum/3.4.3'
+    family: 'urlgrabber'
+    major: '3'
+    minor: '10'
+    patch:
+
+  - user_agent_string: 'urlgrabber/3.9.1 yum/3.2.29'
+    family: 'urlgrabber'
+    major: '3'
+    minor: '9'
+    patch: '1'
+
+  - user_agent_string: 'Wget/1.14 (linux-gnu)'
+    family: 'Wget'
+    major: '1'
+    minor: '14'
+    patch:
+
+  - user_agent_string: 'Windows-Update-Agent/7.9.9600.17729 Client-Protocol/1.21'
+    family: 'Windows-Update-Agent'
+    major: '7'
+    minor: '9'
+    patch: '9600'
+
+  - user_agent_string: 'Windows-Update-Agent/7.9.9600.18094 Client-Protocol/1.21'
+    family: 'Windows-Update-Agent'
+    major: '7'
+    minor: '9'
+    patch: '9600'
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; Android 5.1.1; MI NOTE Pro Build/LMY47V; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/48.0.2564.116 Mobile Safari/537.36 baidubrowser/7.7.13.0 (Baidu; P1 5.1.1)'
+    family: 'Baidu Browser'
+    major: '7'
+    minor: '7'
+    patch: '13'
+
+  - user_agent_string: 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Dragon/36.1.1.21 Chrome/36.0.1985.97 Safari/537.36'
+    family: 'Dragon'
+    major: '36'
+    minor: '1'
+    patch: '1'
+
+  - user_agent_string: 'Mozilla/5.0 (Windows; U; Windows CE 5.1; rv:1.8.1a3) Gecko/20060610 Minimo/0.016'
+    family: 'Minimo'
+    major: '0'
+    minor: '016'
+    patch:
+
+  - user_agent_string: 'Opera/9.80 (MAUI Runtime; Opera Mini/4.4.39008/37.9178; U; en) Presto/2.12.423 Version/12.16'
+    family: 'Opera Mini'
+    major: '4'
+    minor: '4'
+    patch: '39008'
+
+  - user_agent_string: 'Mozilla/5.0 (compatible; 008/0.83; http://www.80legs.com/spider.html) Gecko/2008032620'
+    family: '008'
+    major: '0'
+    minor: '83'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_3_4 like Mac OS X) AppleWebKit/601.1 (KHTML, like Gecko) Outlook-iOS-Android/1.0 Mobile/13G35 Safari/601.1.46")'
+    family: 'Outlook-iOS-Android'
+    major: '1'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.21 Safari/537.36 MMS/1.0.2459.0'
+    family: 'Opera Neon'
+    major: '1'
+    minor: '0'
+    patch: '2459'
+
+  - user_agent_string: 'PANTECH-EUROPA-U4000-orange/1.0 Obigo/Q04C MMS/1.2.0 profile/MIDP-2.0 configuration/CLDC-1.1'
+    family: 'Obigo'
+    major: '04'
+    minor:
+    patch:
+
+  - user_agent_string: 'masscan/1.0 (https://github.com/robertdavidgraham/masscan)'
+    family: 'masscan'
+    major: '1'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36 SznProhlizec/4.3.0-251281'
+    family: 'Seznam prohlížeč'
+    major: '4'
+    minor: '3'
+    patch: '0'
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; Android 7.1.2; Redmi 4X Build/N2G47H) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/64.0.3282.137 Mobile Safari/537.36 SznProhlizec/5.2.1a'
+    family: 'Seznam prohlížeč'
+    major: '5'
+    minor: '2'
+    patch: '1'
+
+  - user_agent_string: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 SznProhlizec/3.8.4 NWjs/0.19.6'
+    family: 'Seznam prohlížeč'
+    major: '3'
+    minor: '8'
+    patch: '4'
+
+  - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_2_1 like Mac OS X) AppleWebKit/602.4.6 (KHTML, like Gecko) Mobile/14D27 SznProhlizec/4.4i'
+    family: 'Seznam prohlížeč'
+    major: '4'
+    minor: '4'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) coc_coc_browser/42.0 CoRom/36.0.1985.144 Chrome/36.0.1985.144 Safari/537.36'
+    family: 'Coc Coc'
+    major: '42'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) coc_coc_browser/49.0 Chrome/43.0.2357.138 Safari/537.36'
+    family: 'Coc Coc'
+    major: '49'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) coc_coc_browser/50.0.125 Chrome/44.0.2403.125 Safari/537.36'
+    family: 'Coc Coc'
+    major: '50'
+    minor: '0'
+    patch: '125'
+
+  - user_agent_string: 'Mozilla/5.0 (compatible; Qwantify/2.4w; +https://www.qwant.com/)/2.4w'
+    family: 'Qwantify'
+    major: '2'
+    minor: '4'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12'
+    family: 'Edge'
+    major: '12'
+    minor:
+    patch:
+
+  - user_agent_string: 'Bloglovin/1.0 (http://www.bloglovin.com; 1000 subscribers)'
+    family: 'Bloglovin'
+    major: '1'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'Feedbin feed-id:1033517 - 1000 subscribers'
+    family: 'Feedbin'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'Tiny Tiny RSS/16.3 (http://tt-rss.org/)'
+    family: 'Tiny Tiny RSS'
+    major: '16'
+    minor: '3'
+    patch:
+
+  - user_agent_string: 'Mtps Feed Aggregation System'
+    family: 'Mtps Feed Aggregation System'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'Stringer'
+    family: 'Stringer'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'Box Sync/4.0.7848;Darwin/10.13;i386/64bit'
+    family: 'Box Sync'
+    major: '4'
+    minor: '0'
+    patch: '7848'
+
+  - user_agent_string: 'Box/1.2.93;Darwin/10.13;i386/64bit'
+    family: 'Box'
+    major: '1'
+    minor: '2'
+    patch: '93'
+
+  - user_agent_string: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_0) AppleWebKit/537.36 (KHTML, like Gecko) BoxNotes/1.3.0 Chrome/56.0.2924.87 Electron/1.6.8 Safari/537.36'
+    family: 'BoxNotes'
+    major: '1'
+    minor: '3'
+    patch: '0'
+
+  - user_agent_string: 'Box Sync/4.0.7848;Windows/8.1;x86 Family 6 Model 158 Stepping 9, GenuineIntel/32bit'
+    family: 'Box Sync'
+    major: '4'
+    minor: '0'
+    patch: '7848'
+
+  - user_agent_string: 'Box Sync/4.0.7848;Windows/10;Intel64 Family 6 Model 158 Stepping 9, GenuineIntel/64bit'
+    family: 'Box Sync'
+    major: '4'
+    minor: '0'
+    patch: '7848'
+
+  - user_agent_string: 'Mozilla/5.0 (Windows NT 6.3) AppleWebKit/537.36 (KHTML, like Gecko) BoxNotes/1.3.0 Chrome/56.0.2924.87 Electron/1.6.8 Safari/537.36'
+    family: 'BoxNotes'
+    major: '1'
+    minor: '3'
+    patch: '0'
+
+  - user_agent_string: 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) BoxNotes/1.3.0 Chrome/56.0.2924.87 Electron/1.6.8 Safari/537.36'
+    family: 'BoxNotes'
+    major: '1'
+    minor: '3'
+    patch: '0'
+
+  - user_agent_string: 'Box/1.2.93;Windows/10;Intel64 Family 6 Model 158 Stepping 9, GenuineIntel/64bit'
+    family: 'Box'
+    major: '1'
+    minor: '2'
+    patch: '93'
+
+  - user_agent_string: 'Evolution/3.26.2.1'
+    family: 'Evolution'
+    major: '3'
+    minor: '26'
+    patch: '2.1'
+
+  - user_agent_string: 'RCM CardDAV plugin/2.0.4'
+    family: 'RCM CardDAV plugin'
+    major: '2'
+    minor: '0'
+    patch: '4'
+
+  - user_agent_string: 'RCM CardDAV plugin/0.9.2-dev'
+    family: 'RCM CardDAV plugin'
+    major: '0'
+    minor: '9'
+    patch: '2-dev'
+
+  - user_agent_string: 'DAVdroid/1.9.2-gplay (2017/11/04; dav4android; okhttp3) Android/7.1.2'
+    family: 'DAVdroid'
+    major: '1'
+    minor: '9'
+    patch: '2'
+
+  - user_agent_string: 'DAVdroid/1.9-ose (2017/10/19; dav4android; okhttp3) Android/7.1.2'
+    family: 'DAVdroid'
+    major: '1'
+    minor: '9'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (Windows) mirall/2.3.2 (build 1) (Nextcloud)'
+    family: 'Nextcloud'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (Linux) mirall/2.3.2 (Nextcloud)'
+    family: 'Nextcloud'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (Android) ownCloud-android/2.0.0'
+    family: 'Owncloud'
+    major: '2'
+    minor: '0'
+    patch: '0'
+
+  - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_0_2 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) AppleNews/608.0.1 Version/2.0.1'
+    family: 'Mobile Safari UI/WKWebView'
+    major: '10'
+    minor: '0'
+    patch: '2'
+
+  - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.3; WOW64; Trident/7.0; .NET4.0E; .NET4.0C; InfoPath.3)'
+    family: 'IE'
+    major: '11'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.2; Trident/6.0; .NET4.0E; .NET4.0C; .NET CLR 3.5.30729; .NET CLR 2.0.50727; .NET CLR 3.0.30729)'
+    family: 'IE'
+    major: '10'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; InfoPath.2)'
+    family: 'IE'
+    major: '9'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'Tableau/1.0 (1025794)'
+    family: 'Tableau'
+    major: '1'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_5 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/11.2.5 Mobile/9B179 Safari/7534.48.3 OktaMobile/5.10.2'
+    family: 'OktaMobile'
+    major: '5'
+    minor: '10'
+    patch: '2'
+
+  - user_agent_string: 'BUbiNG (+http://law.di.unimi.it/BUbiNG.html)'
+    family: 'BUbiNG'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (compatible; SemrushBot/1.2~bl; +http://www.semrush.com/bot.html)'
+    family: 'SemrushBot'
+    major: '1'
+    minor: '2'
+    patch:
+
+  - user_agent_string: 'Outlook-iOS/665.29827.prod.iphone (2.63.0)'
+    family: 'Outlook-iOS'
+    major: '2'
+    minor: '63'
+    patch: '0'
+    
+  - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; WOW64; Trident/8.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729)'
+    family: 'IE'
+    major: '11'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'ESPN Radio/3.2.113 CFNetwork/485.12.30 Darwin/10.4.0'
+    family: 'ESPN'
+    major: '3'
+    minor: '2'
+    patch: '113'
+
+  - user_agent_string: 'ESPN Radio 4.7.4 rv:1032 (iPhone; iPhone OS 9.2.1; en_US)'
+    family: 'ESPN'
+    major: '4'
+    minor: '7'
+    patch: '4'
+    patch_minor: '1032'
+
+  - user_agent_string: 'ESPN Radio 4.5.1 (iPhone; iPhone OS 5.1.1; en_US)'
+    family: 'ESPN'
+    major: '4'
+    minor: '5'
+    patch: '1'
+
+  - user_agent_string: 'ESPN Radio 4.0 (iPhone; iPhone OS 7.1.2; en_AU)'
+    family: 'ESPN'
+    major: '4'
+    minor: '0'
+    patch:
