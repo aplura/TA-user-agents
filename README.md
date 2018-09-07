@@ -31,7 +31,7 @@ To add your own user agents, you can use the YAML file in TA-user-agents/bin/uap
 
 ## Refreshing the BrowserScope database
 
-While any customizations you want can be made, the most frequent request is simply to pull down the latest browser definitions.  Therefore an [automatic update script][fetch-latest] is available in the GitHub repo.
+While any customizations you want can be made, the most frequent request is simply to pull down the latest browser definitions.  Therefore an [automatic update script][fetch_latest] is available in the GitHub repo.
 
 Download the script and place it in the `bin` folder of the app.
 
