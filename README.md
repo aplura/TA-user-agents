@@ -27,10 +27,13 @@ The lookup will output the following fields:
   * ua_device: The type of device used in the event.
 
 ## Customization
-To add your own user agents, you can use the YAML file in TA-user-agents/bin/uap-core/ named regexes.yaml.
+To add your own user agents, you can edit the YAML file in TA-user-agents/bin/uap-core/ named regexes.yaml.
+
+While any customizations you want can be made, the most frequent request is to simply pull down the latest browser definitions.  Therefore an automatic update script has been provided to simplify the process.  Note that because local customizations will be clobbered by the update script, it's important that you pick a customization approach and stick to it.
 
 ## Refreshing the BrowserScope database
-To update user agent string data run the `bin/refresh_latest.sh` script.  This will update not only the browser strings information (`regexes.yaml`), but the python module as well.  If you'd like to run this on a regular basis, consider setting this up as a cron job, or as a scripted input at an appropriate interval.
+
+To fetch the latest user agent matching rules run the `bin/refresh_latest.sh` script.  This will update not only the browser strings information (`regexes.yaml`), but the python module as well.  If you'd like to run this on a regular basis, consider setting this up as a cron job, or as a scripted input at an appropriate interval.
 
 For example, to refresh every Monday at 4AM, add the following `inputs.conf` entry:
 
@@ -39,6 +42,7 @@ For example, to refresh every Monday at 4AM, add the following `inputs.conf` ent
     index = _internal
 
 Note:  This script on works on Unix, requires `git`, and will clobber any local customizations to `regexes.yaml`.
+
 
 ## Support
 Support is on a best-effort basis. Need help? Use the Splunk community resources! I can be found on many of them:
@@ -57,9 +61,11 @@ https://github.com/ua-parser
 Icons made by [Freepik](http://www.freepik.com) from [Flaticon](http://www.flaticon.com) is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)
 
 ## Change log
+
 ### v 1.7.0
-* Created script to automate the upgrading of the latest versions of ua-parser
-* Imported the latest version of Python libraries ua-parser and PyYAML
+* Added script to automate the upgrading of ua-parser to the latest version
+* Imported latest version of Python libraries ua-parser and PyYAML
+* Switched to 3 digit version number to comply with semantic versioning
 
 ### v 1.6
 * Updated to the latest version of the ua-parser

@@ -9,9 +9,9 @@
 #
 # Even though uap-core is a submodule of uap-python, to always get the latest
 # UA parsing configuration, this script pulls both repos independently.  Since
-# we don't initialize the submodule, this doesn't result in duplicate work.
+# the submodule isn't initialize, this doesn't result in duplicate work.
 #
-# WARNINGS  Any local customizations to regexes.yaml will be overwritten.
+#   WARNING: Any local customizations to regexes.yaml will be overwritten.
 #
 # Author:  Lowell Alleman (lowell@kintyre.co)
 
