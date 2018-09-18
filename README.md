@@ -43,7 +43,6 @@ For example, to refresh every Monday at 4AM, add the following `inputs.conf` ent
 
 Note:  This script on works on Unix, requires `git`, and will clobber any local customizations to `regexes.yaml`.
 
-
 ## Support
 Support is on a best-effort basis. Need help? Use the Splunk community resources! I can be found on many of them:
 
@@ -66,6 +65,7 @@ Icons made by [Freepik](http://www.freepik.com) from [Flaticon](http://www.flati
 * Added script to automate the upgrading of ua-parser to the latest version
 * Imported latest version of Python libraries ua-parser and PyYAML
 * Switched to 3 digit version number to comply with semantic versioning
+* Thanks to Lowell Alleman for contributing these!
 
 ### v 1.6
 * Updated to the latest version of the ua-parser
@@ -74,3 +74,6 @@ Icons made by [Freepik](http://www.freepik.com) from [Flaticon](http://www.flati
 
 ### v 1.5
 Initial release
+
+[cloud-packaging]: http://dev.splunk.com/view/app-cert/SP-CAAAE85
+[fetch_latest]: https://github.com/automine/TA-user-agents/blob/master/bin/fetch_latest.sh
