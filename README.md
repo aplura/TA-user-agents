@@ -61,6 +61,9 @@ Icons made by [Freepik](http://www.freepik.com) from [Flaticon](http://www.flati
 
 ## Change log
 
+### v 1.7.2
+* Fix a mistake with a merge request
+
 ### v 1.7.0
 * Added script to automate the upgrading of ua-parser to the latest version
 * Imported latest version of Python libraries ua-parser and PyYAML
