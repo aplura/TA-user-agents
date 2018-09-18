@@ -1,0 +1,8 @@
+# Compiled python files
+*.py[co]
+
+# Exports made by "release.sh"
+*.tgz
+
+# Temporary git clone location (fetch_latest.sh script)
+bin/repos

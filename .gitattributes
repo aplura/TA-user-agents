@@ -1,0 +1,2 @@
+.git*       export-ignore
+release.sh  export-ignore
