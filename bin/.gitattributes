@@ -3,6 +3,3 @@ uap-core/docs               export-ignore
 uap-core/package.json       export-ignore
 uap-core/*test*/            export-ignore
 ua_parser/*_test.py         export-ignore
-
-# Block from export for Splunk Cloud support
-fetch_latest.sh             export-ignore

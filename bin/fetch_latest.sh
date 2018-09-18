@@ -47,7 +47,7 @@ function git_repo_info() {
    git -C "$1" show -s --abbrev=20 --format="%h %cd %cn" --date=format:"%Y-%m-%d"
 }
 
-[[ -x $(which git) ]] || { echo "$MYNAME requires 'git'." 1>&2; exit 2; }
+[[ -x $(command -v git) ]] || { echo "$MYNAME requires 'git'." 1>&2; exit 2; }
 
 [[ -d $REPOS ]] || mkdir -v "$REPOS"
 cd "$REPOS" || exit 1
