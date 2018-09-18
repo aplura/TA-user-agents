@@ -69,12 +69,10 @@ Icons made by [Freepik](http://www.freepik.com) from [Flaticon](http://www.flati
 
 ## Change log
 
-### v 1.7.1
-* Removed the `fetch_latest.sh` from the app to comply with Splunk Cloud packaging standards.  Download link provided above.
-
 ### v 1.7.0
 * Created script to automate the upgrading of the latest versions of ua-parser
 * Imported the latest version of Python libraries ua-parser and PyYAML
+* Thanks to Lowell Alleman for contributing these!
 
 ### v 1.6
 * Updated to the latest version of the ua-parser
