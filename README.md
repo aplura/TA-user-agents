@@ -33,6 +33,8 @@ While any customizations you want can be made, the most frequent request is to s
 
 ## Refreshing the BrowserScope database
 
+Note: This script is no longer included in the Splunkbase to maintain Splunk Cloud compliance. See the UPDATING.md
+
 To fetch the latest user agent matching rules run the `bin/refresh_latest.sh` script.  This will update not only the browser strings information (`regexes.yaml`), but the python module as well.  If you'd like to run this on a regular basis, consider setting this up as a cron job, or as a scripted input at an appropriate interval.
 
 For example, to refresh every Monday at 4AM, add the following `inputs.conf` entry:
@@ -60,6 +62,13 @@ https://github.com/ua-parser
 Icons made by [Freepik](http://www.freepik.com) from [Flaticon](http://www.flaticon.com) is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)
 
 ## Change log
+
+### v 1.7.3
+* Updated Python modules to latest available
+* Will be repackaged without the `fetch_latest` script for Splunkbase and install in Splunk Cloud
+* Updated README.md
+* Added UPDATING.md with information about the script
+* Changed to use MIT license
 
 ### v 1.7.2
 * Fix a mistake with a merge request
