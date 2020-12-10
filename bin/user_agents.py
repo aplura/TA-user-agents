@@ -1,4 +1,8 @@
-import urllib,csv,re,sys,os,numbers,itertools,logging
+import csv
+import logging
+import os
+import sys
+import urllib
 
 ROOT_DIR = os.path.abspath(os.path.dirname(__file__))
 DATA_FILE = os.path.abspath(os.path.join(ROOT_DIR, 'uap-core', 'regexes.yaml'))
@@ -16,7 +20,7 @@ LOG_LEVEL = logging.ERROR
 
 LOG_FILENAME = 'TA-user_agents.log'
 LOG_FORMAT = "[%(asctime)s] %(name)s %(levelname)s: %(message)s"
-logging.basicConfig(filename=LOG_FILENAME,level=LOG_LEVEL,format=LOG_FORMAT)
+logging.basicConfig(filename=LOG_FILENAME, level=LOG_LEVEL, format=LOG_FORMAT)
 logger = logging.getLogger('user_agents')
 
 #
@@ -31,19 +35,20 @@ if __name__ == '__main__':
     header = []
     idx = -1
     for row in r:
-        if (have_header == False):
+        if not have_header:
             header = row
             logger.debug('fields found: %s' % header)
             have_header = True
             z = 0
             for h in row:
-                if (h == "http_user_agent"):
+                if h == "http_user_agent":
                     idx = z
                 z = z + 1
             w.writerow(row)
             continue
 
-        # We only care about the cs_user_agent field - everything else is filled in
+        # We only care about the cs_user_agent field - everything else is
+        # filled in
         http_user_agent = row[idx]
         useragent = urllib.unquote_plus(http_user_agent)
         logger.debug('found useragent %s' % http_user_agent)
@@ -51,8 +56,8 @@ if __name__ == '__main__':
         logger.debug('sending to ua-parser')
         results = []
         try:
-	    results = user_agent_parser.Parse(http_user_agent)
-        except Exception, err:
+            results = user_agent_parser.Parse(http_user_agent)
+        except Exception as err:
             logger.error(err)
             continue
         logger.debug('back from ua-parser')
@@ -60,16 +65,16 @@ if __name__ == '__main__':
         # create our results for Splunk
         # using the full results
         forSplunk = {
-                     'ua_os_family':'unknown',
-                     'ua_os_major':'unknown',
-                     'ua_os_minor':'unknown',
-                     'ua_os_patch':'unknown',
-                     'ua_os_patch_minor':'unknown',
-                     'ua_family':'unknown',
-                     'ua_major':'unknown',
-                     'ua_minor':'unknown',
-                     'ua_patch':'unknown',
-                     'ua_device':'unknown'
+                     'ua_os_family': 'unknown',
+                     'ua_os_major': 'unknown',
+                     'ua_os_minor': 'unknown',
+                     'ua_os_patch': 'unknown',
+                     'ua_os_patch_minor': 'unknown',
+                     'ua_family': 'unknown',
+                     'ua_major': 'unknown',
+                     'ua_minor': 'unknown',
+                     'ua_patch': 'unknown',
+                     'ua_device': 'unknown'
                     }
 
         # UA
@@ -89,7 +94,7 @@ if __name__ == '__main__':
         # OS
         if results['os']['family'] is not None:
             if results['os']['family'] != 'Other':
-	        forSplunk['ua_os_family'] = results['os']['family']
+                forSplunk['ua_os_family'] = results['os']['family']
         if results['os']['major'] is not None:
             forSplunk['ua_os_major'] = results['os']['major']
         if results['os']['minor'] is not None:
@@ -110,5 +115,3 @@ if __name__ == '__main__':
                 orow.append(forSplunk[header_name])
         w.writerow(orow)
         logger.debug('done output')
-
-
