@@ -1,4 +1,5 @@
-import urllib,csv,re,sys,os,numbers,itertools,logging
+from urllib import parse
+import csv,re,sys,os,numbers,itertools,logging
 
 ROOT_DIR = os.path.abspath(os.path.dirname(__file__))
 DATA_FILE = os.path.abspath(os.path.join(ROOT_DIR, 'uap-core', 'regexes.yaml'))
@@ -45,7 +46,7 @@ if __name__ == '__main__':
 
         # We only care about the cs_user_agent field - everything else is filled in
         http_user_agent = row[idx]
-        useragent = urllib.parse.unquote_plus(http_user_agent)
+        useragent = parse.unquote_plus(http_user_agent)
         logger.debug('found useragent %s' % http_user_agent)
 
         logger.debug('sending to ua-parser')
