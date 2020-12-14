@@ -89,7 +89,7 @@ if __name__ == '__main__':
         # OS
         if results['os']['family'] is not None:
             if results['os']['family'] != 'Other':
-	        forSplunk['ua_os_family'] = results['os']['family']
+                forSplunk['ua_os_family'] = results['os']['family']
         if results['os']['major'] is not None:
             forSplunk['ua_os_major'] = results['os']['major']
         if results['os']['minor'] is not None:
