@@ -45,7 +45,7 @@ if __name__ == '__main__':
 
         # We only care about the cs_user_agent field - everything else is filled in
         http_user_agent = row[idx]
-        useragent = urllib.unquote_plus(http_user_agent)
+        useragent = urllib.parse.unquote_plus(http_user_agent)
         logger.debug('found useragent %s' % http_user_agent)
 
         logger.debug('sending to ua-parser')
