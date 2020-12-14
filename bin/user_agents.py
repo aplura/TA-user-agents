@@ -52,7 +52,7 @@ if __name__ == '__main__':
         results = []
         try:
             results = user_agent_parser.Parse(http_user_agent)
-        except Exception, err:
+        except Exception as err:
             logger.error(err)
             continue
         logger.debug('back from ua-parser')
