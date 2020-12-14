@@ -51,7 +51,7 @@ if __name__ == '__main__':
         logger.debug('sending to ua-parser')
         results = []
         try:
-	    results = user_agent_parser.Parse(http_user_agent)
+            results = user_agent_parser.Parse(http_user_agent)
         except Exception, err:
             logger.error(err)
             continue
