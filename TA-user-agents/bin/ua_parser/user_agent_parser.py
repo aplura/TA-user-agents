@@ -18,6 +18,8 @@ from __future__ import absolute_import
 
 import os
 import re
+import sys
+import warnings
 
 __author__ = "Lindsey Simon <elsigh@gmail.com>"
 
@@ -214,43 +216,78 @@ class DeviceParser(object):
         return device, brand, model
 
 
-MAX_CACHE_SIZE = 20
-_parse_cache = {}
+MAX_CACHE_SIZE = 200
+_PARSE_CACHE = {}
+
+_UA_TYPES = str
+if sys.version_info < (3,):
+    _UA_TYPES = (str, unicode)
 
 
-def Parse(user_agent_string, **jsParseBits):
-    """ Parse all the things
-    Args:
-      user_agent_string: the full user agent string
-      jsParseBits: javascript override bits
-    Returns:
-      A dictionary containing all parsed bits
-    """
-    jsParseBits = jsParseBits or {}
-    key = (user_agent_string, repr(jsParseBits))
-    cached = _parse_cache.get(key)
-    if cached is not None:
-        return cached
-    if len(_parse_cache) > MAX_CACHE_SIZE:
-        _parse_cache.clear()
-    v = {
-        "user_agent": ParseUserAgent(user_agent_string, **jsParseBits),
-        "os": ParseOS(user_agent_string, **jsParseBits),
-        "device": ParseDevice(user_agent_string, **jsParseBits),
-        "string": user_agent_string,
-    }
-    _parse_cache[key] = v
+def _lookup(ua, args):
+    if not isinstance(ua, _UA_TYPES):
+        raise TypeError("Expected user agent to be a string, got %r" % ua)
+
+    key = (ua, tuple(sorted(args.items())))
+    entry = _PARSE_CACHE.get(key)
+    if entry is not None:
+        return entry
+
+    if len(_PARSE_CACHE) >= MAX_CACHE_SIZE:
+        _PARSE_CACHE.clear()
+
+    v = _PARSE_CACHE[key] = {"string": ua}
     return v
 
 
+def _cached(ua, args, key, fn):
+    entry = _lookup(ua, args)
+    r = entry.get(key)
+    if not r:
+        r = entry[key] = fn(ua, args)
+    return r
+
+
+def Parse(user_agent_string, **jsParseBits):
+    """Parse all the things
+    Args:
+      user_agent_string: the full user agent string
+    Returns:
+      A dictionary containing all parsed bits
+    """
+    entry = _lookup(user_agent_string, jsParseBits)
+    # entry is complete, return directly
+    if len(entry) == 4:
+        return entry
+
+    # entry is partially or entirely empty
+    if "user_agent" not in entry:
+        entry["user_agent"] = _ParseUserAgent(user_agent_string, jsParseBits)
+    if "os" not in entry:
+        entry["os"] = _ParseOS(user_agent_string, jsParseBits)
+    if "device" not in entry:
+        entry["device"] = _ParseDevice(user_agent_string, jsParseBits)
+
+    return entry
+
+
 def ParseUserAgent(user_agent_string, **jsParseBits):
-    """ Parses the user-agent string for user agent (browser) info.
+    """Parses the user-agent string for user agent (browser) info.
     Args:
       user_agent_string: The full user-agent string.
-      jsParseBits: javascript override bits.
     Returns:
       A dictionary containing parsed bits.
     """
+    return _cached(user_agent_string, jsParseBits, "user_agent", _ParseUserAgent)
+
+
+def _ParseUserAgent(user_agent_string, jsParseBits):
+    if jsParseBits:
+        warnings.warn(
+            "javascript overrides are deprecated and will be removed next release",
+            category=DeprecationWarning,
+            stacklevel=2,
+        )
     if (
         "js_user_agent_family" in jsParseBits
         and jsParseBits["js_user_agent_family"] != ""
@@ -290,13 +327,22 @@ def ParseUserAgent(user_agent_string, **jsParseBits):
 
 
 def ParseOS(user_agent_string, **jsParseBits):
-    """ Parses the user-agent string for operating system info
+    """Parses the user-agent string for operating system info
     Args:
       user_agent_string: The full user-agent string.
-      jsParseBits: javascript override bits.
     Returns:
       A dictionary containing parsed bits.
     """
+    return _cached(user_agent_string, jsParseBits, "os", _ParseOS)
+
+
+def _ParseOS(user_agent_string, jsParseBits):
+    if jsParseBits:
+        warnings.warn(
+            "javascript overrides are deprecated and will be removed next release",
+            category=DeprecationWarning,
+            stacklevel=2,
+        )
     for osParser in OS_PARSERS:
         os, os_v1, os_v2, os_v3, os_v4 = osParser.Parse(user_agent_string)
         if os:
@@ -311,14 +357,23 @@ def ParseOS(user_agent_string, **jsParseBits):
     }
 
 
-def ParseDevice(user_agent_string):
-    """ Parses the user-agent string for device info.
+def ParseDevice(user_agent_string, **jsParseBits):
+    """Parses the user-agent string for device info.
     Args:
         user_agent_string: The full user-agent string.
-        ua_family: The parsed user agent family name.
     Returns:
         A dictionary containing parsed bits.
     """
+    return _cached(user_agent_string, jsParseBits, "device", _ParseDevice)
+
+
+def _ParseDevice(user_agent_string, jsParseBits):
+    if jsParseBits:
+        warnings.warn(
+            "javascript overrides are deprecated and will be removed next release",
+            category=DeprecationWarning,
+            stacklevel=2,
+        )
     for deviceParser in DEVICE_PARSERS:
         device, brand, model = deviceParser.Parse(user_agent_string)
         if device:
@@ -368,7 +423,10 @@ def ParseWithJSOverrides(
     js_user_agent_v2=None,
     js_user_agent_v3=None,
 ):
-    """ backwards compatible. use one of the other Parse methods instead! """
+    """backwards compatible. use one of the other Parse methods instead!"""
+    warnings.warn(
+        "Use Parse (or a specialised parser)", DeprecationWarning, stacklevel=2
+    )
 
     # Override via JS properties.
     if js_user_agent_family is not None and js_user_agent_family != "":
@@ -404,7 +462,8 @@ def ParseWithJSOverrides(
 
 
 def Pretty(family, v1=None, v2=None, v3=None):
-    """ backwards compatible. use PrettyUserAgent instead! """
+    """backwards compatible. use PrettyUserAgent instead!"""
+    warnings.warn("Use PrettyUserAgent", DeprecationWarning, stacklevel=2)
     if v3:
         if v3[0].isdigit():
             return "%s %s.%s.%s" % (family, v1, v2, v3)
@@ -472,12 +531,13 @@ if UA_PARSER_YAML:
     import yaml
 
     try:
-        # Try and use libyaml bindings if available since faster
+        # Try and use libyaml bindings if available since faster,
+        # pyyaml doesn't do it by default (yaml/pyyaml#436)
         from yaml import CSafeLoader as SafeLoader
     except ImportError:
         from yaml import SafeLoader
 
-    with open(UA_PARSER_YAML) as fp:
+    with open(UA_PARSER_YAML, "rb") as fp:
         regexes = yaml.load(fp, Loader=SafeLoader)
 
     USER_AGENT_PARSERS = []

@@ -8,24 +8,26 @@ Provides an external Python lookup that parses User Agents strings.
 |----------------------------|---------------------------------|
 | Author                     | Aplura, LLC                     |
 | App Version                | 1.7.6                           |
-| App Build                  | 13                              |
+| App Build                  | 16                              |
 | Creates an index           | False                           |
 | Implements summarization   | No                              |
 | Summary Indexing           | False                           |
 | Data Model Acceleration    | If Enabled                      |
 | Report Acceleration        | False                           |
-| Splunk Enterprise versions | 9.0, 8.2, 8.1, 8.0              |
+| Splunk Enterprise versions |                                 |
 | Platforms                  | Splunk Enterprise, Splunk Cloud |
 
 ## Scripts and binaries
 
 This App provides the following scripts:
 
-|                 |                                                            |
-|-----------------|------------------------------------------------------------|
-| Diag.py         | For use with the diag command.                             |
-| fetch_latest.sh | For grabbing the most recent versions of the libraries.    |
-| user_agents.py  | This is the lookup command python to parse the user agent. |
+|                     |                                                                           |
+|---------------------|---------------------------------------------------------------------------|
+| Diag.py             | For use with the diag command.                                            |
+| fetch_latest.sample | For grabbing the most recent versions of the libraries.                   |
+| user_agents.py      | This is the lookup command python to parse the user agent.                |
+| Utilities.py        | This is a supporting python script for use with logging, and other needs. |
+| version.py          | This contains the version of the package.                                 |
 
 <div class="note">
 
@@ -58,8 +60,6 @@ Because this App runs on Splunk Enterprise, all the [Splunk Enterprise system re
 ## Installation and Configuration
 
 ### Download
-
-Download PAVO TA User Agents at <https://splunkbase.splunk.com/app/1843>.
 
 ## Installation Process Overview
 
@@ -95,13 +95,13 @@ Access questions and answers specific to PAVO TA User Agents at <https://communi
 
 ### Logging
 
-Copy the `log.cfg` file from default to local and change the settings as needed.
+Copy the \`\`log.cfg\`\` file from \`\`default\`\` to \`\`local\`\` and change the settings as needed.
 
 ### Diagnostics Generation
 
 If a support representative asks for it, a support diagnostic file can be generated. Use the following command to generate the file. Send the resulting file to support.
 
-`$SPLUNK_HOME/bin/splunk diag --collect=app:TA-user-agents`
+\`\`\$SPLUNK_HOME/bin/splunk diag --collect=app:TA-user-agents\`\`
 
 ## Known Issues
 
@@ -110,6 +110,12 @@ Version 1.7.6 of PAVO TA User Agents has the following known issues:
 - None
 
 ## Release notes
+
+### Version 1.7.6
+
+- Improvement
+
+  - Removed Python that was flagged by Upgrade Readiness App.
 
 ### Version 1.7.5
 

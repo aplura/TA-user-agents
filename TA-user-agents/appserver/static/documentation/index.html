@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="generator" content="pandoc" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-        <meta name="dcterms.date" content="2022-12-23" />
+        <meta name="dcterms.date" content="2023-04-03" />
             <title>README Documentation</title>
     <link rel="stylesheet" href="/static/build/css/bootstrap-enterprise.css">
     
@@ -268,7 +268,7 @@ background-color: white !important;
         </tr>
         <tr class="odd">
         <td style="text-align: left;"><p>App Build</p></td>
-        <td style="text-align: left;"><p>13</p></td>
+        <td style="text-align: left;"><p>16</p></td>
         </tr>
         <tr class="even">
         <td style="text-align: left;"><p>Creates an index</p></td>
@@ -292,7 +292,7 @@ background-color: white !important;
         </tr>
         <tr class="odd">
         <td style="text-align: left;"><p>Splunk Enterprise versions</p></td>
-        <td style="text-align: left;"><p>9.0, 8.2, 8.1, 8.0</p></td>
+        <td style="text-align: left;"></td>
         </tr>
         <tr class="even">
         <td style="text-align: left;"><p>Platforms</p></td>
@@ -313,12 +313,20 @@ background-color: white !important;
         <td style="text-align: left;"><p>For use with the diag command.</p></td>
         </tr>
         <tr class="even">
-        <td style="text-align: left;"><p>fetch_latest.sh</p></td>
+        <td style="text-align: left;"><p>fetch_latest.sample</p></td>
         <td style="text-align: left;"><p>For grabbing the most recent versions of the libraries.</p></td>
         </tr>
         <tr class="odd">
         <td style="text-align: left;"><p>user_agents.py</p></td>
         <td style="text-align: left;"><p>This is the lookup command python to parse the user agent.</p></td>
+        </tr>
+        <tr class="even">
+        <td style="text-align: left;"><p>Utilities.py</p></td>
+        <td style="text-align: left;"><p>This is a supporting python script for use with logging, and other needs.</p></td>
+        </tr>
+        <tr class="odd">
+        <td style="text-align: left;"><p>version.py</p></td>
+        <td style="text-align: left;"><p>This contains the version of the package.</p></td>
         </tr>
         </tbody>
         </table>
@@ -342,7 +350,6 @@ background-color: white !important;
         <p>Because this App runs on Splunk Enterprise, all the <a href="https://docs.splunk.com/Documentation/Splunk/latest/Installation/Systemrequirements">Splunk Enterprise system requirements</a> apply.</p>
         <h2 id="_installation_and_configuration">Installation and Configuration</h2>
         <h3 id="_download">Download</h3>
-        <p>Download PAVO TA User Agents at <a href="https://splunkbase.splunk.com/app/1843">https://splunkbase.splunk.com/app/1843</a>.</p>
         <h2 id="_installation_process_overview">Installation Process Overview</h2>
         <ul>
         <li><p>Install the extension.</p></li>
@@ -370,16 +377,23 @@ background-color: white !important;
         <li><p>Support Offered: Splunk Answers, Email</p></li>
         </ul>
         <h3 id="_logging">Logging</h3>
-        <p>Copy the <code>log.cfg</code> file from default to local and change the settings as needed.</p>
+        <p>Copy the ``log.cfg`` file from ``default`` to ``local`` and change the settings as needed.</p>
         <h3 id="_diagnostics_generation">Diagnostics Generation</h3>
         <p>If a support representative asks for it, a support diagnostic file can be generated. Use the following command to generate the file. Send the resulting file to support.</p>
-        <p><code>$SPLUNK_HOME/bin/splunk diag --collect=app:TA-user-agents</code></p>
+        <p>``$SPLUNK_HOME/bin/splunk diag --collect=app:TA-user-agents``</p>
         <h2 id="_known_issues">Known Issues</h2>
         <p>Version 1.7.6 of PAVO TA User Agents has the following known issues:</p>
         <ul>
         <li><p>None</p></li>
         </ul>
         <h2 id="_release_notes">Release notes</h2>
+        <h3 id="_version_1_7_6">Version 1.7.6</h3>
+        <ul>
+        <li><p>Improvement</p>
+        <ul>
+        <li><p>Removed Python that was flagged by Upgrade Readiness App.</p></li>
+        </ul></li>
+        </ul>
         <h3 id="_version_1_7_5">Version 1.7.5</h3>
         <ul>
         <li><p>Improvement</p>
@@ -403,6 +417,6 @@ background-color: white !important;
                 <hr>
     </article>
 </main>
-<p class="date"> Generated on 2022-12-23  /  Copyright 2023 Aplura, LLC.</p>
+<p class="date"> Generated on 2023-04-03  /  Copyright 2023 Aplura, LLC.</p>
 </body>
 </html>

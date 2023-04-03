@@ -1,4 +1,81 @@
 test_cases:
+  - user_agent_string: 'Luminary/1.0'
+    family: 'Luminary'
+    major: '1'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'Luminary/70 CFNetwork/978.0.7 Darwin/18.5.0'
+    family: 'Luminary'
+    major: '70'
+    minor:
+    patch:
+
+  - user_agent_string: 'Luminary/70 CFNetwork/975.0.3 Darwin/18.2.0'
+    family: 'Luminary'
+    major: '70'
+    minor:
+    patch:
+
+  - user_agent_string: 'Luminary/1.0.3 build 71/iOS 12.2'
+    family: 'Luminary'
+    major: '1'
+    minor: '0'
+    patch: '3'
+
+  - user_agent_string: 'Luminary/1.0.2 build 57/Android SDK 28'
+    family: 'Luminary'
+    major: '1'
+    minor: '0'
+    patch: '2'
+
+  - user_agent_string: 'Luminary/1.0.2 build 57/Android SDK 23'
+    family: 'Luminary'
+    major: '1'
+    minor: '0'
+    patch: '2'
+
+  - user_agent_string: 'Luminary/70 CFNetwork/976 Darwin/18.2.0'
+    family: 'Luminary'
+    major: '70'
+    minor:
+    patch:
+
+  - user_agent_string: 'Luminary/70 CFNetwork/978.0.7 Darwin/18.6.0'
+    family: 'Luminary'
+    major: '70'
+    minor:
+    patch:
+
+  - user_agent_string: 'Luminary/1.0.2 build 57/Android SDK 26'
+    family: 'Luminary'
+    major: '1'
+    minor: '0'
+    patch: '2'
+
+  - user_agent_string: 'LuminaryStage/3311 CFNetwork/978.0.7 Darwin/18.5.0'
+    family: 'Luminary'
+    major: '3311'
+    minor:
+    patch:
+
+  - user_agent_string: 'fakeLuminary/1.0'
+    family: 'Other'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'atc/1.0 watchOS/5.1.3 model/Watch3,4 hwp/t8004 build/16S535 (6; dt:156)'
+    family: 'Apple Watch App'
+    major: '3'
+    minor: '4'
+    patch:
+
+  - user_agent_string: 'atc/1.0 watchOS/5.2 model/Watch4,4 hwp/t8006 build/16T225 (6; dt:193)'
+    family: 'Apple Watch App'
+    major: '4'
+    minor: '4'
+    patch:
 
   - user_agent_string: 'Mozilla/5.0 (Windows; U; en-US) AppleWebKit/531.9 (KHTML, like Gecko) AdobeAIR/2.5.1'
     family: 'AdobeAIR'
@@ -204,11 +281,23 @@ test_cases:
     minor:
     patch:
 
+  - user_agent_string: 'Mozilla/5.0 (Macintosh) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 CreativeCloud/4.8.1.435'
+    family: 'Adobe CreativeCloud'
+    major: '4'
+    minor: '8'
+    patch: '1'
+
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; chromeframe/11.0.660.0)'
     family: 'Chrome Frame'
     major: '11'
     minor: '0'
     patch: '660'
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; Android 9; Pixel 2 XL Build/PPP5.180610.010; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/68.0.3440.85 Mobile Safari/537.36'
+    family: 'Chrome Mobile WebView'
+    major: '68'
+    minor: '0'
+    patch: '3440'
 
   - user_agent_string: 'Mozilla/5.0 (Linux; Android 7.1.2; Nexus 5X Build/N2G47W; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36'
     family: 'Chrome Mobile WebView'
@@ -301,7 +390,7 @@ test_cases:
     patch:
 
   - user_agent_string: 'Twitterbot/1.0'
-    family: 'TwitterBot'
+    family: 'Twitterbot'
     major: '1'
     minor: '0'
     patch:
@@ -510,17 +599,41 @@ test_cases:
     minor: '0'
     patch: '2'
 
+  - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 12_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 ManagedBrowser/20181024.1'
+    family: 'Mobile Safari UI/WKWebView'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.2 Safari/605.1.15'
+    family: 'Safari'
+    major: '12'
+    minor: '1'
+    patch: '2'
+
+  - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 12_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148'
+    family: 'Mobile Safari UI/WKWebView'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 12_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 ManagedBrowser/20181024.1'
+    family: 'Mobile Safari UI/WKWebView'
+    major:
+    minor:
+    patch:
+
   - user_agent_string: 'Mozilla/5.0 (iPod touch; CPU iPhone OS 9_3_2 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13F69'
     family: 'Mobile Safari UI/WKWebView'
-    major: '9'
-    minor: '3'
-    patch: '2'
+    major:
+    minor:
+    patch:
 
   - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 7_1_2 like Mac OS X) AppleWebKit/537.51.2 (KHTML, like Gecko) Mobile/11D257'
     family: 'Mobile Safari UI/WKWebView'
-    major: '7'
-    minor: '1'
-    patch: '2'
+    major:
+    minor:
+    patch:
 
   - user_agent_string: 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.3a1) Gecko/20100208 MozillaDeveloperPreview/3.7a1 (.NET CLR 3.5.30729)'
     family: 'MozillaDeveloperPreview'
@@ -756,7 +869,7 @@ test_cases:
     minor: '53'
     patch:
 
-  - user_agent_string: 'User agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.20 Safari/537.36 OPR/15.0.1147.18 (Edition Next)'
+  - user_agent_string: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.20 Safari/537.36 OPR/15.0.1147.18 (Edition Next)'
     family: 'Opera'
     major: '15'
     minor: '0'
@@ -966,6 +1079,12 @@ test_cases:
     minor: '0'
     patch:
 
+  - user_agent_string: 'Superhuman'
+    family: 'Superhuman'
+    major:
+    minor:
+    patch:
+
   - user_agent_string: 'YahooMobileMail/1.0 (Android Mail; 1.3.10) (supersonic;HTC;PC36100;2.3.5/GRJ90)'
     family: 'YahooMobileMail'
     major: '1'
@@ -1043,6 +1162,12 @@ test_cases:
     major: '1'
     minor: '3'
     patch: '45'
+
+  - user_agent_string: 'Mozilla/5.0 (iPhone; CPU OS 10_2_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) 1Password/6.4.5 (like Version/10.2.1 Mobile/14D27 Safari/600.1.4)'
+    family: '1Password'
+    major: '6'
+    minor: '4'
+    patch: '5'
 
   - user_agent_string: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.220 Whale/1.3.50.3 Safari/537.36'
     family: 'Whale'
@@ -1801,7 +1926,7 @@ test_cases:
     family: 'WebPageTest.org bot'
     major: '1'
     minor: '0'
-    patch: 
+    patch:
 
   - user_agent_string: 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.0 Safari/537.36 PTST/1.0'
     family: 'WebPageTest.org bot'
@@ -1813,6 +1938,12 @@ test_cases:
     family: 'WebPageTest.org bot'
     major: '180521'
     minor: '140508'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; Android 6.0.1; Moto G (4) Build/MPJ24.139-64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.81 Mobile Safari/537.36 PTST/391'
+    family: 'WebPageTest.org bot'
+    major: '391'
+    minor:
     patch:
 
   - user_agent_string: 'Mozilla/5.0 (X11; Datanyze; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
@@ -3983,6 +4114,18 @@ test_cases:
     major: '0'
     minor: '7'
     patch:
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; U; Sailfish 3.0; Mobile; rv:45.0) Gecko/45.0 Firefox/45.0 SailfishBrowser/1.0'
+    family: 'Sailfish Browser'
+    major: '1'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; U; Sailfish 3.0; Mobile; rv:45.0) Gecko/45.0 Firefox/45.0 SailfishBrowser/1.2.3'
+    family: 'Sailfish Browser'
+    major: '1'
+    minor: '2'
+    patch: '3'
 
   - user_agent_string: 'Mozilla/5.0 (Linux; Android 5.0.1; SAMSUNG GT-I9506-ORANGE Build/LRX22C) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/2.1 Chrome/34.0.1847.76 Mobile Safari/537.36'
     family: 'Samsung Internet'
@@ -6590,6 +6733,13 @@ test_cases:
     patch: '0'
     patch_minor: '14'
 
+  - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15G77 [FBAN/FBIOS;FBAV/194.0.0.38.99;FBBV/127868476;FBDV/iPhone7,2;FBMD/iPhone;FBSN/iOS;FBSV/11.4.1;FBSS/2;FBCR/OrangeBotswana;FBID/phone;FBLC/en_GB;FBOP/5;FBRV/128807018]'
+    family: 'Facebook'
+    major: '194'
+    minor: '0'
+    patch: '0'
+    patch_minor: '38'
+
   - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 6_1_4 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Mobile/10B350 [Pinterest/iOS]'
     family: 'Pinterest'
     major:
@@ -6706,9 +6856,9 @@ test_cases:
 
   - user_agent_string: 'Mozilla/5.0 (iPad; U; CPU OS 4_3_2 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile'
     family: 'Mobile Safari UI/WKWebView'
-    major: '4'
-    minor: '3'
-    patch: '2'
+    major:
+    minor:
+    patch:
 
   - user_agent_string: 'Mozilla/5.0 (iPad; U; CPU OS 4_3_2 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8H7 Safari'
     family: 'Mobile Safari'
@@ -6781,6 +6931,24 @@ test_cases:
     major: '12'
     minor: '0'
     patch:
+
+  - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 12_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.1 EdgiOS/44.5.0.10 Mobile/15E148 Safari/604.1'
+    family: 'Edge Mobile'
+    major: '44'
+    minor: '5'
+    patch: '0'
+
+  - user_agent_string: 'Mozilla/5.0 (iPad; CPU OS 12_5_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 EdgiOS/46.3.26 Mobile/15E148 Safari/605.1.15'
+    family: 'Edge Mobile'
+    major: '46'
+    minor: '3'
+    patch: '26'
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; Android 8.1.0; Pixel Build/OPM4.171019.021.D1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.109 Mobile Safari/537.36 EdgA/42.0.0.2057'
+    family: 'Edge Mobile'
+    major: '42'
+    minor: '0'
+    patch: '0'
 
   - user_agent_string: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) brave/0.7.11 Chrome/47.0.2526.110 Brave/0.36.5 Safari/537.36'
     family: 'Brave'
@@ -6861,6 +7029,12 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; WOW64; Trident/8.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; Microsoft Outlook 16.0.6366; ms-office; MSOffice 16)'
+    family: 'Outlook'
+    major: '2016'
+    minor:
+    patch:
+
+  - user_agent_string: 'Mozilla/4.0 (compatible; ms-office; MSOffice 16)'
     family: 'Outlook'
     major: '2016'
     minor:
@@ -7229,6 +7403,12 @@ test_cases:
     minor: '14'
     patch:
 
+  - user_agent_string: 'wget2/1.99.2'
+    family: 'wget2'
+    major: '1'
+    minor: '99'
+    patch: '2'
+
   - user_agent_string: 'Windows-Update-Agent/7.9.9600.17729 Client-Protocol/1.21'
     family: 'Windows-Update-Agent'
     major: '7'
@@ -7477,9 +7657,9 @@ test_cases:
 
   - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_0_2 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) AppleNews/608.0.1 Version/2.0.1'
     family: 'Mobile Safari UI/WKWebView'
-    major: '10'
+    major: '2'
     minor: '0'
-    patch: '2'
+    patch: '1'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.3; WOW64; Trident/7.0; .NET4.0E; .NET4.0C; InfoPath.3)'
     family: 'IE'
@@ -7534,7 +7714,7 @@ test_cases:
     major: '33'
     minor: '0'
     patch: '0'
-    
+
   - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_5 like Mac OS X) AppleWebKit/604.5.6 (KHTML, like Gecko) Mobile/15D60 Instagram 33.0.0.11.96 (iPhone9,3; iOS 11_2_5; en_AU; en-AU; scale=2.00; gamut=wide; 750x1334)'
     family: 'Instagram'
     major: '33'
@@ -7546,26 +7726,37 @@ test_cases:
     major: '4'
     minor: '2'
     patch: '2'
-    
+
   - user_agent_string: 'Mozilla/5.0 (Linux; Android 7.0; SM-G610F Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/63.0.3239.111 Mobile Safari/537.36 Flipboard/4.1.9/4323,4.1.9.4323'
     family: 'Flipboard'
     major: '4'
     minor: '1'
     patch: '9'
-    
+
   - user_agent_string: 'Mozilla/5.0 (Linux; Android 7.0; SM-G930F Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/64.0.3282.137 Mobile Safari/537.36 Onefootball/Android/9.10.6'
     family: 'Onefootball'
     major: '9'
     minor: '10'
     patch: '6'
-    
+
   - user_agent_string: 'Mozilla/5.0 (Linux; Android 7.0; SM-A520F Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36 Flipboard-Briefing/2.7.28'
     family: 'Flipboard-Briefing'
     major: '2'
     minor: '7'
     patch: '28'
-    
-    
+
+  - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Phantom/ios/22.06.08.44'
+    family: 'Phantom'
+    major: '22'
+    minor: '06'
+    patch: '08'
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; Android 12; SM-G991B Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/102.0.5005.125 Mobile Safari/537.36 Phantom/android/22.06.08.47'
+    family: 'Phantom'
+    major: '22'
+    minor: '06'
+    patch: '08'
+
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; WOW64; Trident/8.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729)'
     family: 'IE'
     major: '11'
@@ -7596,7 +7787,7 @@ test_cases:
     major: '4'
     minor: '0'
     patch:
-      
+
   - user_agent_string: 'Mozilla/5.0 (X11; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.2.2 Waterfox/55.2.2'
     family: 'Waterfox'
     major: '55'
@@ -7626,6 +7817,61 @@ test_cases:
     major: '0'
     minor: '8'
     patch: '1'
+
+  - user_agent_string: 'akka-http/10.0.10'
+    family: 'akka-http'
+    major: '10'
+    minor: '0'
+    patch: '10'
+
+  - user_agent_string: 'Python/3.6 aiohttp/3.5.4'
+    family: 'Python aiohttp'
+    major: '3'
+    minor: '5'
+    patch: '4'
+
+  - user_agent_string: 'unirest-java/1.3.11'
+    family: 'unirest-java'
+    major: '1'
+    minor: '3'
+    patch: '11'
+
+  - user_agent_string: 'axios/0.18.0'
+    family: 'axios'
+    major: '0'
+    minor: '18'
+    patch: '0'
+
+  - user_agent_string: 'got/9.6.0 (https://github.com/sindresorhus/got)'
+    family: 'got'
+    major: '9'
+    minor: '6'
+    patch: '0'
+
+  - user_agent_string: 'S3Gof3r'
+    family: 'S3Gof3r'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'rusoto/0.36.0 rust/1.35.0 linux'
+    family: 'rusoto'
+    major: '0'
+    minor: '36'
+    patch: '0'
+
+  - user_agent_string: 'ibm-cos-sdk-java/2.3.0 Linux/4.9.0-8-amd64 Java_HotSpot(TM)_64-Bit_Server_VM/9.0.4+11/9.0.4'
+    family: 'ibm-cos-sdk-java'
+    major: '2'
+    minor: '3'
+    patch: '0'
+
+  - user_agent_string: 'aws-sdk-dotnet-45/3.3.11.0 aws-sdk-dotnet-core/3.3.17.10 .NET_Runtime/4.0 .NET_Framework/4.0 OS/Microsoft_Windows_NT_6.2.9200.0 ClientSync'
+    family: 'aws-sdk-dotnet-45'
+    major: '3'
+    minor: '3'
+    patch: '11'
+    patch_minor: '0'
 
   - user_agent_string: 'Boto/2.48.0 Python/2.7.14 Linux/4.2.0-41-generic'
     family: 'Boto'
@@ -7717,6 +7963,12 @@ test_cases:
     minor: '4'
     patch: '5'
 
+  - user_agent_string: 'S3 Browser 8.6.7 https://s3browser.com'
+    family: 'S3 Browser'
+    major: '8'
+    minor: '6'
+    patch: '7'
+
   - user_agent_string: 'rclone/v1.34'
     family: 'rclone'
     major: '1'
@@ -7751,7 +8003,13 @@ test_cases:
     family: 'Salesforce'
     major: '15'
     minor: '2'
-    patch: 
+    patch:
+
+  - user_agent_string: 'AnyConnect/4.1.1234'
+    family: 'AnyConnect'
+    major: '4'
+    minor: '1'
+    patch: '1234'
 
   - user_agent_string: 'YahooMailProxy; https://help.yahoo.com/kb/yahoo-mail-proxy-SLN28749.html'
     family: 'YahooMailProxy'
@@ -7765,6 +8023,30 @@ test_cases:
     minor: '38'
     patch: '0'
     patch_minor: '25'
+
+  - user_agent_string: 'Mozilla/5.0 (iPad; U; CPU OS 4_3_5 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8L1 Twitter for iPad'
+    family: 'Twitter'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; Android 9; Nokia 2.1 Build/PKQ1.181105.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.157 Mobile Safari/537.36 TwitterAndroid'
+    family: 'Twitter'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_1 like Mac OS X) AppleWebKit/604.4.7 (KHTML, like Gecko) Mobile/15C153 Twitter for iPhone/7.19'
+    family: 'Twitter'
+    major: '7'
+    minor: '19'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 7_1_2 like Mac OS X) AppleWebKit/537.51.2 (KHTML, like Gecko) GSA/4.2.2.38484 Mobile/11D257 Safari/9537.53'
+    family: 'Google'
+    major: '4'
+    minor: '2'
+    patch: '2'
 
   - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0_2 like Mac OS X) AppleWebKit/604.1.34 (KHTML, like Gecko) GSA/36.0.169645775 Mobile/15A421 Safari/604.1'
     family: 'Google'
@@ -7814,3 +8096,570 @@ test_cases:
     major:
     minor:
     patch:
+
+  - user_agent_string: 'Ghost/2.13.1+moya (https://github.com/TryGhost/Ghost)'
+    family: 'Ghost'
+    major: '2'
+    minor: '13'
+    patch: '1'
+
+  - user_agent_string: 'Ghost/2.10.8 (https://github.com/TryGhost/Ghost)'
+    family: 'Ghost'
+    major: '2'
+    minor: '10'
+    patch: '8'
+
+  - user_agent_string: 'PAN GlobalProtect/5.2.4 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/602.1 (KHTML, like Gecko) PanGPUI Version/10.0 Safari/602.1'
+    family: 'GlobalProtect'
+    major: '5'
+    minor: '2'
+    patch: '4'
+
+  - user_agent_string: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3763.0 Safari/537.36 Edg/75.0.131.0'
+    family: 'Edge'
+    major: '75'
+    minor: '0'
+    patch: '131'
+    patch_minor: '0'
+
+  - user_agent_string: 'Mozilla/5.0 (iPad; CPU OS 12_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 TopBuzz com.alex.NewsMaster/8.2.1 (iPad; iOS 12.3.1; en; WIFI)'
+    family: 'TopBuzz'
+    major: '8'
+    minor: '2'
+    patch: '1'
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; Android 9; SM-G950U Build/PPR1.180610.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/76.0.3809.111 Mobile Safari/537.36 JsSdk/2 TopBuzz/9.4.3 NetType/4G'
+    family: 'TopBuzz'
+    major: '9'
+    minor: '4'
+    patch: '3'
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; Android 9; SM-J737A Build/PPR1.180610.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/75.0.3770.143 Mobile Safari/537.36 JsSdk/2 TopBuzz/9.1.4 NetType/4G'
+    family: 'TopBuzz'
+    major: '9'
+    minor: '1'
+    patch: '4'
+
+  - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_3 like Mac OS X) AppleWebKit/603.3.8 (KHTML, like Gecko) Mobile/14G60 TopBuzz com.topbuzz.videoen/8.2.2 (iPhone; iOS 10.3.3; en; WIFI; CTRadioAccessTechnologyLTE)'
+    family: 'TopBuzz'
+    major: '8'
+    minor: '2'
+    patch: '2'
+
+  - user_agent_string: 'Snapchat/10.29.1.0 (iPhone10,1; iOS 11.2; gzip)'
+    family: 'Snapchat'
+    major: '10'
+    minor: '29'
+    patch: '1'
+
+  - user_agent_string: 'OgScrper/1.0.0'
+    family: 'OgScrper'
+    major: '1'
+    minor: '0'
+    patch: '0'
+
+  - user_agent_string: 'Android: Client/0.0.0-indev (Android SDK built for x86; Android 9)'
+    family: 'Android'
+    major: '9'
+    minor:
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; U; Android 9; zh-cn; vivo X21 Build/PKQ1.180819.001) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/9.9 Mobile Safari/537.36'
+    family: 'QQ Browser Mobile'
+    major: '9'
+    minor: '9'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_2 like Mac OS X) AppleWebKit/603.2.4 (KHTML, like Gecko) Mobile/14F89 Safari/603.2.4 EdgiOS/41.1.35.1'
+    family: 'Edge Mobile'
+    major: '41'
+    minor: '1'
+    patch: '35'
+    patch_minor: '1'
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; Android 8.0; Pixel XL Build/OPP3.170518.006) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.0 Mobile Safari/537.36 EdgA/41.1.35.1'
+    family: 'Edge Mobile'
+    major: '41'
+    minor: '1'
+    patch: '35'
+    patch_minor: '1'
+
+  - user_agent_string: 'Mozilla/5.0 (compatible;AspiegelBot)'
+    family: 'AspiegelBot'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; Android 7.0;) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36 (compatible; AspiegelBot)'
+    family: 'AspiegelBot'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 QGIS/31100'
+    family: 'QGIS'
+    major: '3'
+    minor: '11'
+    patch: '0'
+
+  - user_agent_string: 'Mozilla/5.0 QGIS/2.18.20'
+    family: 'QGIS'
+    major: '2'
+    minor: '18'
+    patch: '20'
+
+  - user_agent_string: 'JOSM/1.5 (15492 nl) Windows 7 64-Bit Java/1.8.0_221'
+    family: 'JOSM'
+    major: '1'
+    minor: '5'
+    patch:
+
+  - user_agent_string: 'FME/2018.7.34.18312  libcurl/7.57.0 WinSSL zlib/1.2.11 WinIDN libssh2/1.7.0'
+    family: 'FME'
+    major: '2018.7'
+    minor: '34'
+    patch: '18312'
+
+  - user_agent_string: 'GeoEvent Server 10.5.1'
+    family: 'GeoEvent Server'
+    major: '10'
+    minor: '5'
+    patch: '1'
+
+  - user_agent_string: 'ArcGIS Pro 2.4.2 (000000000) - ArcGIS Pro'
+    family: 'ArcGIS Pro'
+    major: '2'
+    minor: '4'
+    patch: '2'
+
+  - user_agent_string: 'ArcGIS Client Using WinInet'
+    family: 'ArcMap'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'ArcGISRuntime-Android/10.3.0 (Android 4.4; armeabi-v7a; SAMSUNG-GT-I9195) arcgis-collector/18.0.3 (00000000-0000-0000-0000-000000000000)'
+    family: 'Collector for ArcGIS'
+    major: '18'
+    minor: '0'
+    patch: '3'
+
+  - user_agent_string: 'ArcGISRuntime-iOS/10.3.0 (iOS 10.2.1; iPad5,4) arcgis-collector/19.0.2 (00000000-0000-0000-0000-000000000000)'
+    family: 'Collector for ArcGIS'
+    major: '19'
+    minor: '0'
+    patch: '2'
+
+  - user_agent_string: 'ArcGISRuntime-iOS/100.4 (iOS 11.4; iPad7,6) arcgis-aurora/18.1.0 (00000000-0000-0000-0000-000000000000)'
+    family: 'Collector for ArcGIS'
+    major: '18'
+    minor: '1'
+    patch: '0'
+
+  - user_agent_string: 'ArcGISRuntime-NET/10.3.0 (Windows 10.0.18362; x64; UAP; Windows.Desktop) arcgis-collector/18.0.2 (00000000-0000-0000-0000-000000000000)'
+    family: 'Collector for ArcGIS'
+    major: '18'
+    minor: '0'
+    patch: '2'
+
+  - user_agent_string: 'Collector-Android-10.3.7/ArcGIS.Android-10.2.5/7.0/SAMSUNG-SM-T815'
+    family: 'Collector for ArcGIS'
+    major: '10'
+    minor: '3'
+    patch: '7'
+
+  - user_agent_string: 'Collector-iOS-10.4.0:ArcGISiOS-10.2.4+Collector/13.1.2/iPad5,4'
+    family: 'Collector for ArcGIS'
+    major: '10'
+    minor: '4'
+    patch: '0'
+
+  - user_agent_string: 'Collector/6212016 CFNetwork/978.0.7 Darwin/18.7.0'
+    family: 'Collector for ArcGIS'
+    major: '6212016'
+    minor:
+    patch:
+
+  - user_agent_string: 'ArcGISRuntime-Android/100.2.2 (Android 6.0; armeabi-v7a; SAMSUNG-SM-T800) arcgis-explorer/18.1.0 (00000000-0000-0000-0000-000000000000)'
+    family: 'Explorer for ArcGIS'
+    major: '18'
+    minor: '1'
+    patch: '0'
+
+  - user_agent_string: 'ArcGISRuntime-iOS/100.1 (iPhone OS 9.3.5; iPad2,2) arcgis-explorer/17.1.2 (00000000-0000-0000-0000-000000000000)'
+    family: 'Explorer for ArcGIS'
+    major: '17'
+    minor: '1'
+    patch: '2'
+
+  - user_agent_string: 'Explorer/1544 CFNetwork/1107.1 Darwin/19.0.0'
+    family: 'Explorer for ArcGIS'
+    major: '1544'
+    minor:
+    patch:
+
+  - user_agent_string: 'Explorer-Android-10.2.10/ArcGIS.Android-10.2.8/5.1.1/SAMSUNG-SM-G361F'
+    family: 'Explorer for ArcGIS'
+    major: '10'
+    minor: '2'
+    patch: '10'
+
+  - user_agent_string: 'Explorer-iOS-10.2.10:ArcGISiOS-10.2.4+Collector/13.1.3/iPhone9,3'
+    family: 'Explorer for ArcGIS'
+    major: '10'
+    minor: '2'
+    patch: '10'
+
+  - user_agent_string: 'ArcGISRuntime-Android/100.1.1 (Android 7.0; arm64-v8a; SAMSUNG-SM-G930F) arcgis-workforce/17.0.1 (00000000-0000-0000-0000-000000000000)'
+    family: 'Workforce for ArcGIS'
+    major: '17'
+    minor: '0'
+    patch: '1'
+
+  - user_agent_string: 'Workforce-iOS-17.0.1:ArcGISiOS-100.0.0.1529+dev/13.2/iPad6,12'
+    family: 'Workforce for ArcGIS'
+    major: '17'
+    minor: '0'
+    patch: '1'
+
+  - user_agent_string: 'AR/10.2.6.1704 .Net/Desktop (Win32NT/6.1.7601.65536; Win64) arcgisearth/1.5'
+    family: 'ArcGIS Earth'
+    major: '1'
+    minor: '5'
+    patch:
+
+  - user_agent_string: 'ArcGISRuntime-iOS/100.6 (iOS 12.3.1; iPad6,3) com.esri.earth.phone/1.0.0'
+    family: 'ArcGIS Earth'
+    major: '1'
+    minor: '0'
+    patch: '0'
+
+  - user_agent_string: 'ArcGISiOS-10.2.4/12.1/iPad5,2'
+    family: 'ArcGIS Runtime SDK for iOS'
+    major: '10'
+    minor: '2'
+    patch: '4'
+
+  - user_agent_string: 'ArcGISRuntime-iOS/100.1.1 (iOS 12.4.1; iPhone10,4)'
+    family: 'ArcGIS Runtime SDK for iOS'
+    major: '100'
+    minor: '1'
+    patch: '1'
+
+  - user_agent_string: 'ArcGIS.Android-10.2.4/8.0.0/SAMSUNG-SM-A530F'
+    family: 'ArcGIS Runtime SDK for Android'
+    major: '10'
+    minor: '2'
+    patch: '4'
+
+  - user_agent_string: 'ArcGIS.Android.10.2'
+    family: 'ArcGIS Runtime SDK for Android'
+    major: '10'
+    minor: '2'
+    patch:
+
+  - user_agent_string: 'ArcGISRuntime-Android/100.4 (Android 10.0; arm64-v8a; ONEPLUS-HD1903)'
+    family: 'ArcGIS Runtime SDK for Android'
+    major: '100'
+    minor: '4'
+    patch:
+
+  - user_agent_string: 'ArcGISRuntime-Qt/100.3 (Windows 10; x86_64; Qt 5.12.1; C++)'
+    family: 'ArcGIS Runtime SDK for Qt'
+    major: '100'
+    minor: '3'
+    patch:
+
+  - user_agent_string: 'ArcGISRuntime-NET/100.7 (Windows 10.0.18362; Win64; WOW64; UAP; Windows.Desktop)'
+    family: 'ArcGIS Runtime SDK for NET'
+    major: '100'
+    minor: '7'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.3 Mobile/15E148 DuckDuckGo/7 Safari/605.1.15'
+    family: 'DuckDuckGo Mobile'
+    major: '7'
+    minor:
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; Android 11) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/87.0.4280.141 Mobile DuckDuckGo/5 Safari/537.36'
+    family: 'DuckDuckGo Mobile'
+    major: '5'
+    minor:
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 [en] (X11, U; OpenVAS-VT 8.0.9)'
+    family: 'OpenVAS Scanner'
+    major: '8'
+    minor: '0'
+    patch: '9'
+
+  - user_agent_string: 'Mozilla/5.0 [en] (X11, U; OpenVAS 7.0.10)'
+    family: 'OpenVAS Scanner'
+    major: '7'
+    minor: '0'
+    patch: '10'
+
+  - user_agent_string: 'Mozilla/4.75 [en] (X11, U; OpenVAS)'
+    family: 'OpenVAS Scanner'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'cf/6.51.0+2acd15650.2020-04-07 (go1.13.8; amd64 linux)'
+    family: 'CloudFoundry'
+    major: '6'
+    minor: '51'
+    patch: '0+2acd15650.2020-04-07'
+
+  - user_agent_string: 'RPT-HTTPClient/0.3-3E'
+    family: 'HTTPClient'
+    major: '0'
+    minor: '3'
+    patch: '3E'
+
+  - user_agent_string: 'CloudCockpitBackend/2.8.7'
+    family: 'CloudCockpitBackend'
+    major: '2'
+    minor: '8'
+    patch: '7'
+
+  - user_agent_string: 'ReactorNetty/0.9.6.RELEASE'
+    family: 'ReactorNetty'
+    major: '0'
+    minor: '9'
+    patch: '6'
+
+  - user_agent_string: 'axios/0.18.1'
+    family: 'axios'
+    major: '0'
+    minor: '18'
+    patch: '1'
+
+  - user_agent_string: 'Jersey/2.29.1 (HttpUrlConnection 1.8.0_252)  '
+    family: 'Jersey'
+    major: '2'
+    minor: '29'
+    patch: '1'
+
+  - user_agent_string: 'Java-EurekaClient/v1.6.2'
+    family: 'Java-EurekaClient'
+    major: '1'
+    minor: '6'
+    patch: '2'
+
+  - user_agent_string: 'go-cli 6.46.0+29d6257f1.2019-07-09 / windows'
+    family: 'go-cli'
+    major: '6'
+    minor: '46'
+    patch: '0+29d6257f1.2019-07-09'
+
+  - user_agent_string: 'Vert.x-WebClient/3.9.0'
+    family: 'Vert.x-WebClient'
+    major: '3'
+    minor: '9'
+    patch: '0'
+
+  - user_agent_string: 'Apache-CXF/3.1.14-sap-07'
+    family: 'Apache-CXF'
+    major: '3'
+    minor: '1'
+    patch: '14'
+
+  - user_agent_string: 'Go-CF-client/1.1'
+    family: 'Go-CF-client'
+    major: '1'
+    minor: '1'
+    patch:
+
+  - user_agent_string: 'HTTPClient/1.0 (2.8.3, ruby 2.5.5 (2019-03-15))'
+    family: 'HTTPClient'
+    major: '1'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'ping-service'
+    family: 'ping-service'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'CloudFoundryJavaClient/unknown (Java; SAP AG/1.8.0_251) ReactorNetty/0.9.6.RELEASE (Netty/4.1.49.Final)'
+    family: 'ReactorNetty'
+    major: '0'
+    minor: '9'
+    patch: '6'
+
+  - user_agent_string: 'lua-resty-http/0.13 (Lua) ngx_lua/10013'
+    family: 'lua-resty-http'
+    major: '0'
+    minor: '13'
+    patch:
+
+  - user_agent_string: 'AHC/1.0'
+    family: 'AHC'
+    major: '1'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'sap xsuaa'
+    family: 'sap xsuaa'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'sap-leonardo-iot-sdk-nodejs / 0.1.4'
+    family: 'sap-leonardo-iot-sdk-nodejs'
+    major: '0'
+    minor: '1'
+    patch: '4'
+
+  - user_agent_string: 'Node-oauth'
+    family: 'Node-oauth'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'go-resty/1.12.0 (https://github.com/go-resty/resty)'
+    family: 'go-resty'
+    major: '1'
+    minor: '12'
+    patch: '0'
+
+  - user_agent_string: 'Site24x7'
+    family: 'Site24x7'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'SAP NetWeaver Application Server (1.0;740)'
+    family: 'SAP NetWeaver Application Server'
+    major: '7'
+    minor: '40'
+    patch:
+
+  - user_agent_string: 'SAP CPI'
+    family: 'SAP CPI'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'JAEGER_SECURITY'
+    family: 'JAEGER_SECURITY'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; U; Android 8.1.0; tr; SNE-LX1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.137 Tenta/2.10.3 Mobile Safari/537.36 Mobile'
+    family: 'Tenta Browser'
+    major: '2'
+    minor: '10'
+    patch: '3'
+
+  - user_agent_string: 'Mozilla/5.0 (compatible; monitis - premium monitoring service; http://www.monitis.com)'
+    family: 'Monitis'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E302 Pandora/1902.1'
+    family: 'Pandora'
+    major: '1902'
+    minor: '1'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Pandora/1904.1.3'
+    family: 'Pandora'
+    major: '1904'
+    minor: '1'
+    patch: '3'
+
+  - user_agent_string: 'Pandora/1904.1 Android/8.0.0 heroqlteusc (ExoPlayerLib1.5.14.1)'
+    family: 'Pandora'
+    major: '1904'
+    minor: '1'
+    patch:
+
+  - user_agent_string: 'Pandora/2091 CFNetwork/978.0.7 Darwin/18.5.0'
+    family: 'Pandora'
+    major: '2091'
+    minor:
+    patch:
+
+  - user_agent_string: 'PandoraRSSCrawler/1.0 (podcastpartnerships@pandora.com)'
+    family: 'PandoraRSSCrawler'
+    major:  '1'
+    minor:  '0'
+    patch:
+
+  - user_agent_string: 'MinIO (linux; amd64) minio-go/v6.0.39 mc/2019-10-09T22:54:57Z'
+    family: 'minio-go'
+    major: '6'
+    minor: '0'
+    patch: '39'
+    patch_minor: ''
+
+  - user_agent_string: 'MinIO (darwin; amd64) minio-go/v6.0.45 mc/2019-12-17T23:26:28Z'
+    family: 'minio-go'
+    major: '6'
+    minor: '0'
+    patch: '45'
+    patch_minor: ''
+
+  - user_agent_string: 'http.rb/4.1.1'
+    family: 'http.rb'
+    major: '4'
+    minor: '1'
+    patch: '1'
+    patch_minor: ''
+
+  - user_agent_string: 'ureq/1.5.1'
+    family: 'ureq'
+    major: '1'
+    minor: '5'
+    patch: '1'
+    patch_minor: ''
+
+  - user_agent_string: 'Transmit/5.6.0'
+    family: 'Transmit'
+    major: '5'
+    minor: '6'
+    patch: '0'
+    patch_minor: ''
+
+  - user_agent_string: 'GuzzleHttp/6.3.3 PHP/7.1.17-1+0~20180505045738.17+stretch~1.gbpde69c6'
+    family: 'GuzzleHttp'
+    major: '6'
+    minor: '3'
+    patch: '3'
+    patch_minor: ''
+
+  - user_agent_string: 'Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)'
+    family: 'HTTrack'
+    major:  '3'
+    minor:  '0'
+    patch:
+
+  - user_agent_string: 'PostmanRuntime/7.20.1'
+    family: 'PostmanRuntime'
+    major: '7'
+    minor: '20'
+    patch: '1'
+
+  - user_agent_string: 'Mozilla/4.0 (SerenityOS; x86_64) LibWeb+LibJS (Not KHTML, nor Gecko) LibWeb'
+    family: 'SerenityOS Browser'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'surveyon/2.7.6 Mobile (Android: 11; MODEL:CPH2127; PRODUCT:CPH2127T2; MANUFACTURER:OPPO;)'
+    family: 'Surveyon'
+    major: '2'
+    minor: '7'
+    patch: '6'
+
+  - user_agent_string: 'HTTPie/3.2.1'
+    family: 'HTTPie'
+    major: '3'
+    minor: '2'
+    patch: '1'

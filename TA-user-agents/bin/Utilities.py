@@ -16,17 +16,7 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 """
-from __future__ import absolute_import
-import sys
 import os.path
-if sys.version_info >= (3, 0):
-    base_location = sys.path[0].split(os.path.sep)
-    base_location.pop(-1)
-    bl = os.path.sep.join(base_location)
-    sys.path.insert(0, os.path.sep.join([bl, "lib", "python3.7", "site-packages"]))
-    sys.path.insert(0, os.path.sep.join([bl, "bin", "lib", "python3.7", "site-packages"]))
-    sys.path.insert(0, os.path.sep.join([bl, "bin"]))
-
 import csv
 import json
 import logging
