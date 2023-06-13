@@ -115,8 +115,8 @@ Version 1.7.7 of PAVO TA User Agents has the following known issues:
 ### Version 1.7.7
 
 - Improvement
-
   - Removed Python that was flagged by Upgrade Readiness App.
+
 
 ### Version 1.7.5
 
