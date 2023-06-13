@@ -1,9 +1,9 @@
-# Application-level permissions
+# #::HDR:: ;; # App: TA-user-agents ;; # File: default.meta ;; # Updated: 2023-06-13 14:37:48
 
 []
-access = read : [ * ], write : [ admin, sc_admin ]
+access = read: [ * ], write: [ admin, sc_admin ]
 export = system
 
 [checklist]
-access = read : [ * ], write : [ admin, sc_admin ]
+access = read: [ * ], write: [ admin, sc_admin ]
 export = system

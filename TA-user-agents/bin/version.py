@@ -1,1 +1,1 @@
-__version__='TA-user-agents.1.7.6b16'
+__version__='TA-user-agents.1.7.7b21'

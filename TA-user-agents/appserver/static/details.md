@@ -7,8 +7,8 @@ Provides an external Python lookup that parses User Agents strings.
 |                            |                                 |
 |----------------------------|---------------------------------|
 | Author                     | Aplura, LLC                     |
-| App Version                | 1.7.6                           |
-| App Build                  | 16                              |
+| App Version                | 1.7.7                           |
+| App Build                  | 21                              |
 | Creates an index           | False                           |
 | Implements summarization   | No                              |
 | Summary Indexing           | False                           |
@@ -28,6 +28,7 @@ This App provides the following scripts:
 | user_agents.py      | This is the lookup command python to parse the user agent.                |
 | Utilities.py        | This is a supporting python script for use with logging, and other needs. |
 | version.py          | This contains the version of the package.                                 |
+| app_properties.py   | This contains app properties.                                             |
 
 <div class="note">
 
