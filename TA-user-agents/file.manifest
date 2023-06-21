@@ -1,6 +1,6 @@
 fe18f5a6ddf995b1caea599b660553b6,LICENSE
 c44b982c9b008afc7d9b8a7a4d70b02e,README/apl_logging.conf.spec
-a3c2f57e863fb9f7555662bdd0db3df3,README.md
+1a1b7b675b4b817e1d752c61ab1ad9e7,README.md
 9835165a065b6ea59681b6cc19566ba6,UPDATING.md
 5d7c8b07220fd002e6260f1085709ebc,app.manifest
 7fe225aaa2170539ac295feb37c9498f,appserver/static/appIcon.png
@@ -9,10 +9,10 @@ a3c2f57e863fb9f7555662bdd0db3df3,README.md
 80dd6d813310bd5d21139ed0359b45af,appserver/static/dashboard.css
 53c6597a5c3e93b5973d77e2831cc2ee,appserver/static/appIconAlt_2x.png
 53c6597a5c3e93b5973d77e2831cc2ee,appserver/static/appIcon_2x.png
-a3c2f57e863fb9f7555662bdd0db3df3,appserver/static/documentation/README.md
-16bc597657219ac908ed0aa428c3e944,appserver/static/documentation/index.html
-a3c2f57e863fb9f7555662bdd0db3df3,appserver/static/README.md
-02562d3e6ec8968301abdcd5862c18a8,appserver/static/details.md
+1a1b7b675b4b817e1d752c61ab1ad9e7,appserver/static/documentation/README.md
+63b96de7992657ab8a9e76b05319e4ff,appserver/static/documentation/index.html
+1a1b7b675b4b817e1d752c61ab1ad9e7,appserver/static/README.md
+060116e00adf8e4efa97c212177ce559,appserver/static/details.md
 a6c6cfe794800b659f85b82854ffa31c,appserver/static/installation.md
 ddb1c7abd305098b20b6fc506a41909e,appserver/static/third_party.md
 d0dad685db287e59ffff2ecc2d39f137,appserver/static/troubleshooting.md
@@ -46,7 +46,7 @@ c2f435618e7a85993466a23b28e3c746,bin/uap-core/test_resources/pgts_browser_list.t
 1afc432ce9f79d5e4becf43f69371047,bin/uap-core/tests/test_os.yaml
 df538932af095539f7f9e7b126d106a4,bin/uap-core/tests/test_ua.yaml
 7d5972507d004695eb0e17c4363b66d7,bin/user_agents.py
-94ed4fd16994c9665b1dc8bf35e31130,bin/version.py
+3235122e7d26f39e180b8c56a04ea765,bin/version.py
 ca22489c5afa041f4a0b33fa6b71cbf2,bin/yaml/__init__.py
 c6e483eed9e1974ef2f01c8a7260276f,bin/yaml/composer.py
 3722e375c216e7b1703de5973f6f0ad6,bin/yaml/constructor.py
@@ -67,7 +67,7 @@ ac5b86cbaa857699312176cba7490cc2,bin/yaml/serializer.py
 33b627d1833d1f2298f80230a4ff13e8,bin/Diag.py
 a1cc535d07cc08e925ebe508f97db9e7,bin/app_properties.py
 f85503236c2b5aa916ef2ee0b2dec727,default/apl_logging.conf
-fb398cad173e80c58a99b2c3be7b92e6,default/app.conf
+dfabaa69425bf271d4ee3e35102708fd,default/app.conf
 1f227b6ecfedb83a74f812523fc8b10c,default/checklist.conf
 4be98579c60224b2464c3a03437f01b1,default/data/ui/nav/default.xml
 84d856d52f7cb703c3f6d3f2a8b6a10b,default/log.cfg
