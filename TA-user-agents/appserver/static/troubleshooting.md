@@ -28,6 +28,12 @@ Version 1.7.8 of PAVO TA User Agents has the following known issues:
 
 ## Release notes
 
+### Version 1.7.8
+
+- Improvement
+
+  - Removed Perl Scripts that were flagged.
+
 ### Version 1.7.7
 
 - Improvement
