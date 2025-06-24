@@ -28,6 +28,14 @@ Version 1.7.9 of PAVO TA User Agents has the following known issues:
 
 ## Release notes
 
+### Version 1.7.9
+
+- Improvement
+
+  - Updated UAP Parser and Core libraries.
+
+  - Confirmed Splunk 10 Compatibility.
+
 ### Version 1.7.8
 
 - Improvement
