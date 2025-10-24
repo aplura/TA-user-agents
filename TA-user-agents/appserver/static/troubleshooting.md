@@ -22,7 +22,7 @@ If a support representative asks for it, a support diagnostic file can be genera
 
 ## Known Issues
 
-Version 1.7.9 of PAVO TA User Agents has the following known issues:
+Version 1.7.10 of PAVO TA User Agents has the following known issues:
 
 - None
 

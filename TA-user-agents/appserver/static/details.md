@@ -7,8 +7,8 @@ Provides an external Python lookup that parses User Agents strings.
 |                            |                                 |
 |----------------------------|---------------------------------|
 | Author                     | Aplura, LLC                     |
-| App Version                | 1.7.9                           |
-| App Build                  | 37                              |
+| App Version                | 1.7.10                          |
+| App Build                  | 46                              |
 | Creates an index           | False                           |
 | Implements summarization   | No                              |
 | Summary Indexing           | False                           |
