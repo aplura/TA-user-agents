@@ -28,6 +28,12 @@ Version 1.7.10 of PAVO TA User Agents has the following known issues:
 
 ## Release notes
 
+### Version 1.7.10
+
+- Bug Fix
+
+  - Updated a bug in the package inclusions to make sure all python required is bundled with the TA.
+
 ### Version 1.7.9
 
 - Improvement
