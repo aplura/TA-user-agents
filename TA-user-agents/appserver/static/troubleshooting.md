@@ -22,11 +22,17 @@ If a support representative asks for it, a support diagnostic file can be genera
 
 ## Known Issues
 
-Version 1.7.9 of PAVO TA User Agents has the following known issues:
+Version 1.7.10 of PAVO TA User Agents has the following known issues:
 
 - None
 
 ## Release notes
+
+### Version 1.7.10
+
+- Bug Fix
+
+  - Updated a bug in the package inclusions to make sure all python required is bundled with the TA.
 
 ### Version 1.7.9
 
