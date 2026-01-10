@@ -28,6 +28,8 @@ Version 1.7.11 of PAVO TA User Agents has the following known issues:
 
 ## Release notes
 
+### Version 1.7.11
+
 ### Version 1.7.10
 
 - Bug Fix
