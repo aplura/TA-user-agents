@@ -1,6 +1,6 @@
 """
 Written by Kyle Smith for Aplura, LLC
-Copyright (C) 2016-2019 Aplura, ,LLC
+Copyright (C) 2016-2026 Aplura, ,LLC
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -48,7 +48,7 @@ class KennyLoggins:
         if not os.path.isdir(log_location):
             os.mkdir(log_location)
         output_file_name = os.path.join(log_location, "{}.log".format(file_name))
-        _log.propogate = False
+        _log.propagate = False
         _log.setLevel(log_level)
         f_handle = handlers.RotatingFileHandler(output_file_name, maxBytes=25000000, backupCount=5)
         formatter = logging.Formatter(

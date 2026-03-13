@@ -7,8 +7,8 @@ Provides an external Python lookup that parses User Agents strings.
 |                            |                                 |
 |----------------------------|---------------------------------|
 | Author                     | Aplura, LLC                     |
-| App Version                | 1.7.10                          |
-| App Build                  | 47                              |
+| App Version                | 1.7.11                          |
+| App Build                  | 53                              |
 | Release Date               | 2025-10-30                      |
 | Creates an index           | False                           |
 | Implements summarization   | No                              |
@@ -82,9 +82,9 @@ If the need for pulling updated libraries before a re-release of this app, use t
 #   WARNING: Any local customizations to regexes.yaml will be overwritten.
 #
 # Author:  Lowell Alleman (lowell@kintyre.co)
-
-cd "$(dirname "${BASH_SOURCE[0]}")" || exit 1
-MYNAME=$(basename "${BASH_SOURCE[0]}")
+BS=BASH_SOURCE[0]
+cd "$(dirname "$BS")" || exit 1
+MYNAME=$(basename "$BS")
 BIN_DIR=$(pwd)
 REPOS="$BIN_DIR/repos"
 

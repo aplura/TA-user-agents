@@ -22,11 +22,25 @@ If a support representative asks for it, a support diagnostic file can be genera
 
 ## Known Issues
 
-Version 1.7.10 of PAVO TA User Agents has the following known issues:
+Version 1.7.11 of PAVO TA User Agents has the following known issues:
 
 - None
 
 ## Release notes
+
+### Version 1.7.11
+
+- Additions
+
+  - TA is now visible
+
+  - Included an Overview dashboard with basic usage instructions.
+
+- Improvement
+
+  - Updated `uap-parser` and `uap-core` packages
+
+  - Validated works on `Splunk 10.2` and `Splunk Cloud 10.2.2510.9`
 
 ### Version 1.7.10
 

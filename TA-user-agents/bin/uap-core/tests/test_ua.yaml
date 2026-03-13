@@ -191,6 +191,18 @@ test_cases:
     minor:
     patch:
 
+  - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 SP-engine/2.74.0 main%2F1.0 matrixstyle/0 flyflow/6.12.3.32 info baiduboxapp/6.12.3.32 (Baidu; P2 18.5) NABar/1.0 themeUA=Theme/default'
+    family: 'Baidu Explorer'
+    major: '6'
+    minor: '12'
+    patch: '3'
+
+  - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 SP-engine/3.35.0 main/1.0 baiduboxapp/15.8.0.10 (Baidu; P2 18.5) NABar/1.0 themeUA=Theme/default'
+    family: 'Baidu Explorer'
+    major: '15'
+    minor: '8'
+    patch: '0'
+
   - user_agent_string: 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.15 Safari/535.11 QQBrowser/6.13.13719.201'
     family: 'QQ Browser'
     major: '6'
@@ -313,11 +325,53 @@ test_cases:
     minor: '1'
     patch: '0'
 
+  - user_agent_string: 'Mozilla/5.0 (Linux; Android 7.1.2; vivo X9Plus Build/N2G47H) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/38.0.2125.102 Mobile Safari/537.36 VivoBrowser/5.2.21'
+    family: 'VivoBrowser'
+    major: '5'
+    minor: '2'
+    patch: '21'
+
   - user_agent_string: 'Mozilla/5.0 (Linux; U; Android 13; zh-cn; Infinix X6833B Build/SP1A.210812.016) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/103.0.5060.129 HiBrowser/v2.10.1.2 UWS/ Mobile Safari/537.36'
     family: 'HiBrowser'
     major: '2'
     minor: '10'
     patch: '1'
+
+  - user_agent_string: 'Mozilla/5.0 (Windows; U; Windows NT 5.2; en-US) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.34 Safari/537.36 HIBrowser/v2.25.7.1'
+    family: 'HiBrowser'
+    major: '2'
+    minor: '25'
+    patch: '7'
+
+  - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)  Mobile/15E148 Weibo (iPhone17,1__weibo__15.4.1__iphone__os18.5)'
+    family: 'Weibo'
+    major: '15'
+    minor: '4'
+    patch: '1'
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; Android 12; BRT-W09 Build/HONORBRT-W09; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/92.0.4515.105 Mobile Safari/537.36 Weibo (HONOR-BRT-W09__weibo__15.4.2__android__android12)'
+    family: 'Weibo'
+    major: '15'
+    minor: '4'
+    patch: '2'
+
+  - user_agent_string: 'Mozilla/5.0 (iPad; CPU OS 18_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)  Mobile/15E148 Weibo (iPad8,6__weibo__15.4.1__ipad__os18.4)'
+    family: 'Weibo'
+    major: '15'
+    minor: '4'
+    patch: '1'
+
+  - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_6_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 WeiboIntliOS_iPhone_6720'
+    family: 'Weibo'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 WeiboliteiOS_iPhone_1070'
+    family: 'Weibo'
+    major:
+    minor:
+    patch:
 
   - user_agent_string: 'Mozilla/5.0 (Linux; Android 9; Pixel 2 XL Build/PPP5.180610.010; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/68.0.3440.85 Mobile Safari/537.36'
     family: 'Chrome Mobile WebView'
@@ -2662,6 +2716,18 @@ test_cases:
     family: 'Other'
     major:
     minor:
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (compatible; Google-InspectionTool/1.0;)'
+    family: 'Google-InspectionTool'
+    major: '1'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.6367.201 Mobile Safari/537.36 (compatible; Google-InspectionTool/1.0;)'
+    family: 'Google-InspectionTool'
+    major: '1'
+    minor: '0'
     patch:
 
   - user_agent_string: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36'
@@ -7090,6 +7156,19 @@ test_cases:
     minor:
     patch:
 
+  # Brave iOS, checks for (Brave) or Brave at end
+  - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Safari/604.1 Brave'
+    family: 'Brave'
+    major:
+    minor:
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (iPad; CPU OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Safari/604.1 (Brave)'
+    family: 'Brave'
+    major:
+    minor:
+    patch:
+
   - user_agent_string: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome Safari/537.36'
     family: 'HeadlessChrome'
     major:
@@ -9099,3 +9178,129 @@ test_cases:
     major: '118'
     minor: '0'
     patch: '1'
+
+  - user_agent_string: 'Mozilla/5.0 (Android 14; Mobile VR; rv:128.0) Gecko/128.0 Firefox/128.0 Wolvic/1.8.1'
+    family: 'Wolvic Browser'
+    major: '1'
+    minor: '8'
+    patch: '1'
+
+  - user_agent_string: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Safari/537.36 HeyTapBrowser/45.13.4.1 Chrome/125.0.6422.72'
+    family: 'HeyTap Browser'
+    major: '45'
+    minor: '13'
+    patch: '4'
+
+  - user_agent_string: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Safari/537.36 HeyTapBrowser/45.13.5.0.3beta Chrome/125.0.6422.72'
+    family: 'HeyTap Browser'
+    major: '45'
+    minor: '13'
+    patch: '5'
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; U; Android 15; en-gb; CPH2617 Build/AP3A.240617.008) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.6422.72 Mobile Safari/537.36 HeyTapBrowser/45.13.6.1'
+    family: 'HeyTap Browser'
+    major: '45'
+    minor: '13'
+    patch: '6'
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; Android 14; FNE-AN00 Build/HONORFNE-AN00;) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/97.0.4692.98 Mobile Safari/537.36 T7/13.38 SP-engine/2.76.0 languageType/0 bdh_dvt/0 bdh_de/1 bdh_ds/1 bdapp/1.0 (bdhonorbrowser; bdhonorbrowser) bdhonorbrowser/9.6.0.4 (P1 14) NABar/1.0'
+    family: 'Honor Browser'
+    major: '9'
+    minor: '6'
+    patch: '0'
+
+  - user_agent_string: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.98 Safari/537.36 T7/13.38 languageType/0 bdh_dvt/0 bdh_de/0 bdh_ds/0 bdhonorbrowser/9.6.0.4 (P1 16)'
+    family: 'Honor Browser'
+    major: '9'
+    minor: '6'
+    patch: '0'
+
+  - user_agent_string: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5845.114 HonorBrowser/3.0.9.303 Safari/537.36'
+    family: 'Honor Browser'
+    major: '3'
+    minor: '0'
+    patch: '9'
+
+  - user_agent_string: 'Mozilla/5.0 (SMART-TV; Linux; Smart TV) AppleWebKit/537.36 (KHTML, like Gecko) Thano/3.0 Chrome/143.0.7499.34 Safari/537.36'
+    family: 'SmartTV WebBrowser'
+    major: '3'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 NetType/WIFI MicroMessenger/7.0.20.1781(0x6700143B) WindowsWechat(0x63090c33) XWEB/14315'
+    family: 'WeChat Browser'
+    major: '7'
+    minor: '0'
+    patch: '20'
+
+  - user_agent_string: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 NetType/WIFI MicroMessenger/7.0.20.1781(0x6700143B) WindowsWechat(0x63090a13) UnifiedPCWindowsWechat(0xf2541510) XWEB/17071'
+    family: 'WeChat Browser'
+    major: '7'
+    minor: '0'
+    patch: '20'
+
+  - user_agent_string: 'Mozilla/5.0 (X11; Linux armv7l) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.5563.146 Odin/111.5563.5.1 Safari/537.36'
+    family: 'Odin'
+    major: '111'
+    minor: '5563'
+    patch: '5'
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; NetCast; U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36 SmartTV/10.0 Colt/2.0'
+    family: 'NetCast Smart TV'
+    major: '2'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) PHX/19.7'
+    family: 'Phoenix Browser'
+    major: '19'
+    minor: '7'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; U; Android 15; ar-eg; RMX3760 Build/AP3A.240905.015.A2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.128 Mobile Safari/537.36 PHX/20.0'
+    family: 'Phoenix Browser'
+    major: '20'
+    minor: '0'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 NetType/WIFI MicroMessenger/6.8.0(0x16080000) MacWechat/3.8.7(0x13080710) XWEB/1191'
+    family: 'WeChat Browser'
+    major: '6'
+    minor: '8'
+    patch: '0'
+
+  - user_agent_string: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/144.0.7559.59 Safari/534.24 Lite Browser/4.12'
+    family: 'Lite Browser'
+    major: '4'
+    minor: '12'
+    patch:
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; Andr0id 12; BRAVIA 4K VH2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6533.120 Safari/537.36 OMI/4.25.1.92.StableAVB_Sony.1'
+    family: 'Vewd Browser'
+    major: '4'
+    minor: '25'
+    patch: '1'
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; Andr0id 12; MMI) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.6261.128 Safari/537.36 OMI/4.24.3.102.Daimos.11 Model/AU-AU401 TiVoAuto'
+    family: 'Vewd Browser'
+    major: '4'
+    minor: '24'
+    patch: '3'
+
+  - user_agent_string: 'Mozilla/5.0 (Linux ) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.6261.128 Safari/537.36 OMI/4.24.3.93.MIKE.221 Model/Vestel-MB180 VSTVB MB100 FVC/9.0 (BUSH; MB180; ) TiVoOS/1.0.0 (Vestel MB180 BUSH) SmartTvA/3.0.0'
+    family: 'Vewd Browser'
+    major: '4'
+    minor: '24'
+    patch: '3'
+
+  - user_agent_string: 'Mozilla/5.0 (Windows NT 5.1; rv:102.0) Gecko/20100101 Firefox/102.0 Mypal/74.1.4'
+    family: 'Mypal Browser'
+    major: '74'
+    minor: '1'
+    patch: '4'
+
+  - user_agent_string: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0 Mypal/74.1.4'
+    family: 'Mypal Browser'
+    major: '74'
+    minor: '1'
+    patch: '4'
