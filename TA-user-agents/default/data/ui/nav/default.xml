@@ -1,2 +1,4 @@
-<nav search_view="search" color="#54A3C9" default="search" >
+<nav search_view="search" color="#54A3C9" >
+    <view name="ptua_overview" default="true" label="TA User Agent Overview"/>
+    <view name="search"/>
 </nav>
