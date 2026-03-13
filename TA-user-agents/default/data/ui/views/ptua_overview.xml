@@ -1,0 +1,259 @@
+
+<dashboard version="2" theme="light">
+    <label>TA User Agent Overview</label>
+    <description></description>
+    <definition><![CDATA[
+{
+	"dataSources": {
+		"ds_671h2qDO": {
+			"type": "ds.spl2",
+			"options": {
+				"query": "| @spl2 search index=_internal useragent=* \n|  head 5",
+				"queryParameters": {}
+			},
+			"name": "ptua_spl2_base_useragents"
+		},
+		"ds_xro7F9d2": {
+			"type": "ds.chain",
+			"options": {
+				"extend": "ds_2HplAJME",
+				"query": "| eval http_user_agent = coalesce(http_user_agent, useragent)\n| stats count by http_user_agent\n| lookup user_agents http_user_agent\n| table http_user_agent count ua_*"
+			},
+			"name": "ptua_lookup"
+		},
+		"ds_2HplAJME": {
+			"type": "ds.search",
+			"options": {
+				"query": "index IN (_internal, main) useragent=* OR http_user_agent=*\n|  head 5"
+			},
+			"name": "ptua_base_useragents"
+		},
+		"ds_mfS0LkyV": {
+			"type": "ds.chain",
+			"options": {
+				"extend": "ds_xro7F9d2",
+				"query": "| stats sum(count) as count by ua_family"
+			},
+			"name": "ptua_gph_family"
+		},
+		"ds_2xT99YE9": {
+			"type": "ds.chain",
+			"options": {
+				"extend": "ds_xro7F9d2",
+				"query": "| eval ua_family_major = ua_family.\": \".ua_major\n| stats sum(count) as count by ua_family_major"
+			},
+			"name": "ptua_gph_family_version"
+		},
+		"ds_eWtjK54p": {
+			"type": "ds.chain",
+			"options": {
+				"extend": "ds_xro7F9d2",
+				"query": "| stats sum(count) as count by ua_device"
+			},
+			"name": "ptua_gph_devices"
+		}
+	},
+	"visualizations": {
+		"viz_2ANSxQhO": {
+			"type": "splunk.events",
+			"options": {
+				"list.drilldown": "none"
+			},
+			"dataSources": {
+				"primary": "ds_2HplAJME"
+			},
+			"eventHandlers": [
+				{
+					"type": "drilldown.linkToSearch",
+					"options": {
+						"type": "auto",
+						"newTab": false
+					}
+				}
+			],
+			"title": "Raw Sample Events",
+			"description": "First 5 Events: [index IN (_internal, main) useragent=* OR http_user_agent=* | head 5]"
+		},
+		"viz_PwvtFDK1": {
+			"type": "splunk.table",
+			"dataSources": {
+				"primary": "ds_xro7F9d2"
+			},
+			"title": "With Lookup Information",
+			"options": {
+				"columnFormat": {
+					"http_user_agent": {
+						"width": 220
+					}
+				}
+			}
+		},
+		"viz_xfI5z5fe": {
+			"type": "splunk.column",
+			"dataSources": {
+				"primary": "ds_mfS0LkyV"
+			},
+			"title": "Family Types",
+			"options": {
+				"legendDisplay": "off",
+				"yAxisTitleVisibility": "hide"
+			}
+		},
+		"viz_3HhPzMLf": {
+			"type": "splunk.column",
+			"dataSources": {
+				"primary": "ds_2xT99YE9"
+			},
+			"title": "Major Versions",
+			"options": {
+				"legendDisplay": "off",
+				"yAxisTitleVisibility": "hide"
+			}
+		},
+		"viz_Z1z3EU2V": {
+			"type": "splunk.column",
+			"dataSources": {
+				"primary": "ds_eWtjK54p"
+			},
+			"title": "Devices",
+			"options": {
+				"legendDisplay": "off",
+				"yAxisTitleVisibility": "hide"
+			}
+		},
+		"viz_VD9EFzq6": {
+			"type": "splunk.markdown",
+			"options": {
+				"markdown": "TA User Agent is a lookup script, and is used with the `lookup` command.\n\n`<search> | lookup user_agents http_user_agent AS <http_user_agent_field>`\n\nAny fields that do not have a value are set to `unknown`."
+			}
+		}
+	},
+	"applicationProperties": {
+		"hideEdit": false,
+		"hideExport": false
+	},
+	"inputs": {
+		"input_global_trp": {
+			"type": "input.timerange",
+			"options": {
+				"token": "global_time",
+				"defaultValue": "-15m,now"
+			},
+			"title": "Global Time Range"
+		}
+	},
+	"layout": {
+		"options": {},
+		"globalInputs": [
+			"input_global_trp"
+		],
+		"tabs": {
+			"items": [
+				{
+					"layoutId": "layout_1",
+					"label": "New tab"
+				}
+			]
+		},
+		"layoutDefinitions": {
+			"layout_1": {
+				"type": "grid",
+				"structure": [
+					{
+						"item": "viz_2ANSxQhO",
+						"type": "block",
+						"position": {
+							"x": 0,
+							"y": 0,
+							"w": 610,
+							"h": 284
+						}
+					},
+					{
+						"item": "viz_3HhPzMLf",
+						"type": "block",
+						"position": {
+							"x": 1180,
+							"y": 0,
+							"w": 260,
+							"h": 284
+						}
+					},
+					{
+						"item": "viz_xfI5z5fe",
+						"type": "block",
+						"position": {
+							"x": 610,
+							"y": 0,
+							"w": 293,
+							"h": 284
+						}
+					},
+					{
+						"item": "viz_Z1z3EU2V",
+						"type": "block",
+						"position": {
+							"x": 903,
+							"y": 0,
+							"w": 277,
+							"h": 284
+						}
+					},
+					{
+						"item": "viz_VD9EFzq6",
+						"type": "block",
+						"position": {
+							"x": 0,
+							"y": 284,
+							"w": 334,
+							"h": 274
+						}
+					},
+					{
+						"item": "viz_PwvtFDK1",
+						"type": "block",
+						"position": {
+							"x": 334,
+							"y": 284,
+							"w": 1106,
+							"h": 274
+						}
+					}
+				],
+				"options": {
+					"width": 1440,
+					"height": 960
+				}
+			}
+		}
+	},
+	"title": "TA User Agent Overview",
+	"description": "",
+	"defaults": {
+		"dataSources": {
+			"ds.search": {
+				"options": {
+					"queryParameters": {
+						"latest": "$global_time.latest$",
+						"earliest": "$global_time.earliest$"
+					}
+				}
+			},
+			"ds.spl2": {
+				"options": {
+					"queryParameters": {
+						"latest": "$global_time.latest$",
+						"earliest": "$global_time.earliest$"
+					}
+				}
+			}
+		},
+		"visualizations": {
+			"global": {
+				"showProgressBar": true
+			}
+		}
+	}
+}
+    ]]></definition>
+</dashboard>

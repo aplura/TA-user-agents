@@ -8,7 +8,7 @@ Provides an external Python lookup that parses User Agents strings.
 |----------------------------|---------------------------------|
 | Author                     | Aplura, LLC                     |
 | App Version                | 1.7.11                          |
-| App Build                  | 51                              |
+| App Build                  | 52                              |
 | Release Date               | 2025-10-30                      |
 | Creates an index           | False                           |
 | Implements summarization   | No                              |
@@ -180,6 +180,18 @@ Version 1.7.11 of PAVO TA User Agents has the following known issues:
 ## Release notes
 
 ### Version 1.7.11
+
+- Additions
+
+  - TA is now visible
+
+  - Included an Overview dashboard with basic usage instructions.
+
+- Improvement
+
+  - Updated `uap-parser` and `uap-core` packages
+
+  - Validated works on `Splunk 10.2` and `Splunk Cloud 10.2.2510.9`
 
 ### Version 1.7.10
 
