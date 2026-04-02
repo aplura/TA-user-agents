@@ -23,11 +23,11 @@ LOG_LEVEL = logging.ERROR
 LOG_FILENAME = 'TA-user-agents'
 kl = KennyLoggins()
 logger = kl.get_logger(app_name="TA-user-agents", file_name=LOG_FILENAME, log_level=logging.INFO)
-PLATFORM_ATTRS = ["system", "node", "release", "version", "machine"]
 # Main routine - basically it's the standard python recipe for handling
 # Splunk lookups
 #
 if __name__ == '__main__':
+    PLATFORM_ATTRS = ["system", "node", "release", "version", "machine"]
     sys_info = " ".join([f'{PLATFORM_ATTRS[i]}="{k}"' for i, k in enumerate(platform.uname()[:5])])
     logger.info(f'action="system_information" python_version="{sys.version}" python_executable="{sys.executable}" {sys_info}')
     r = csv.reader(sys.stdin)

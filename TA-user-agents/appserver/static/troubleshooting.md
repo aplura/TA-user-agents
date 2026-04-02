@@ -22,11 +22,17 @@ If a support representative asks for it, a support diagnostic file can be genera
 
 ## Known Issues
 
-Version 1.7.11 of PAVO TA User Agents has the following known issues:
+Version 1.7.12 of PAVO TA User Agents has the following known issues:
 
 - None
 
 ## Release notes
+
+### Version 1.7.12
+
+- Bug Fix
+
+  - Fixed the `README/apl_logging.conf.spec` to properly parse against the TA.
 
 ### Version 1.7.11
 
