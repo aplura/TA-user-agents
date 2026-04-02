@@ -1,6 +1,6 @@
-[TA-user_agents]
+[TA-user-agents]
 modularinput = <value>
 restclient = <value>
 utilities = <value>
-kenny_loggins = <value>
+kenny_logins = <value>
 TA-user-agents = <value>

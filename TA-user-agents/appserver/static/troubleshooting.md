@@ -28,6 +28,12 @@ Version 1.7.12 of PAVO TA User Agents has the following known issues:
 
 ## Release notes
 
+### Version 1.7.12
+
+- Bug Fix
+
+  - Fixed the `README/apl_logging.conf.spec` to properly parse against the TA.
+
 ### Version 1.7.11
 
 - Additions
