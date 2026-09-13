@@ -7,8 +7,8 @@ Provides an external Python lookup that parses User Agents strings.
 |                            |                                 |
 |----------------------------|---------------------------------|
 | Author                     | Aplura, LLC                     |
-| App Version                | 1.7.13                          |
-| App Build                  | 57                              |
+| App Version                | 1.7.14                          |
+| App Build                  | 58                              |
 | Release Date               | 2025-10-30                      |
 | Creates an index           | False                           |
 | Implements summarization   | No                              |
@@ -173,11 +173,13 @@ If a support representative asks for it, a support diagnostic file can be genera
 
 ## Known Issues
 
-Version 1.7.13 of PAVO TA User Agents has the following known issues:
+Version 1.7.14 of PAVO TA User Agents has the following known issues:
 
 - None
 
 ## Release notes
+
+### Version 1.7.13
 
 ### Version 1.7.12
 
@@ -239,7 +241,7 @@ Version 1.7.13 of PAVO TA User Agents has the following known issues:
 
 # Third Party Notices
 
-Version 1.7.13 of PAVO TA User Agents incorporates the following Third-party software or third-party services.
+Version 1.7.14 of PAVO TA User Agents incorporates the following Third-party software or third-party services.
 
 - ua_parser
 
